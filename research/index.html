@@ -1,0 +1,47 @@
+---
+layout: default
+title: Research
+description: Research areas and current working papers.
+---
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Research</div>
+      <h2>Where my work sits</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Corporate Disclosure &amp; Financial Reporting</h3>
+        <p>How firms communicate financial and non-financial information, and what that communication reveals.</p>
+      </div>
+      <div class="card">
+        <h3>Financial &amp; Business Analytics</h3>
+        <p>Applying data-driven and predictive methods to finance, ESG, and business decision problems.</p>
+      </div>
+      <div class="card">
+        <h3>Natural Language Processing &amp; Large Language Models</h3>
+        <p>Using contextual embeddings and LLMs to analyze financial and business text at scale.</p>
+      </div>
+      <div class="card">
+        <h3>Information Retrieval &amp; Evidence Discovery</h3>
+        <p>Retrieving the specific evidence that matters from large document collections.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Current Work</div>
+      <h2>Working papers &amp; research in progress</h2>
+    </div>
+    <div class="card-grid">
+      {% for p in site.data.projects %}
+        {% include project-card.html p=p %}
+      {% endfor %}
+    </div>
+    <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="{{ '/publications/' | relative_url }}">View All Publications</a></p>
+  </div>
+</section>

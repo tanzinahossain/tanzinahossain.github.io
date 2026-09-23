@@ -103,6 +103,20 @@ section + section{border-top:1px solid var(--border)}
 .pathway-links a{font-size:.92rem; font-weight:500; padding:.5rem 1rem; border:1px solid var(--border); border-radius:4px; background:var(--white); color:var(--navy)}
 .pathway-links a:hover{border-color:var(--teal); color:var(--teal); text-decoration:none}
 
+/* ===== Record lists (education, experience, honors, service) ===== */
+.rec-item{padding-bottom:1.1rem; margin-bottom:1.1rem; border-bottom:1px solid var(--border)}
+.rec-item:last-child{border-bottom:0; margin-bottom:0; padding-bottom:0}
+.rec-item .ry{font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--teal)}
+.rec-item .rt{font-weight:600; margin:.2rem 0 .1rem}
+.rec-item .ro{font-size:.85rem; color:var(--text-muted)}
+.rec-item .rd{font-size:.9rem; color:var(--text-muted); margin-top:.4rem}
+
+.group-label{font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--blue); margin:2rem 0 1rem; padding-top:1.5rem; border-top:1px solid var(--border)}
+.group-label:first-child{margin-top:0; padding-top:0; border-top:0}
+
+.tag-list{display:flex; flex-wrap:wrap; gap:.5rem}
+.tag-chip{display:inline-block; font-size:.8rem; padding:.3rem .7rem; border:1px solid var(--border); border-radius:3px; color:var(--text-muted); background:var(--gray)}
+
 @media (max-width:640px){
   .hero-grid{flex-direction:column; text-align:center}
   .hero-actions{justify-content:center}
