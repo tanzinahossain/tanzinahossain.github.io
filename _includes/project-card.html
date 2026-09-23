@@ -1,12 +1,10 @@
 {% comment %}
   Renders one research-project card. Usage: {% include project-card.html p=item %}
+  Kept deliberately light on detail — these are unpublished working papers,
+  so no methods/data/question is shown to avoid revealing pre-publication work.
 {% endcomment %}
 <div class="project-card">
   <h3>{{ include.p.title }}</h3>
-  <dl>
-    <dt>Question</dt><dd>{{ include.p.question }}</dd>
-    <dt>Methods</dt><dd>{{ include.p.methods }}</dd>
-    <dt>Data</dt><dd>{{ include.p.data }}</dd>
-  </dl>
+  <p class="pa" style="margin:.3rem 0 .6rem">{{ include.p.authors }}</p>
   <span class="status-tag">{{ include.p.status }}</span>
 </div>

@@ -85,17 +85,8 @@ description: Connecting data, technology, and business decisions through predict
         <span class="status-tag">{{ p.status }} · {{ p.year }}</span>
       </div>
 
-      <div class="project-card">
-        <h3>Financial-disclosure analytics</h3>
-        <dl>
-          <dt>Business problem</dt><dd>Does a firm's year-over-year disclosure actually say something new, or just restate itself?</dd>
-          <dt>Data</dt><dd>Year-over-year MD&amp;A sections of U.S. corporate filings</dd>
-          <dt>Methods</dt><dd>Contextual embeddings, semantic-similarity measurement</dd>
-          <dt>Practical value</dt><dd>Helps analysts flag disclosures with meaningful year-over-year change.</dd>
-        </dl>
-        {% assign p = site.data.projects | where: "id", "md-and-a-change" | first %}
-        <span class="status-tag">{{ p.status }}</span>
-      </div>
+      {% assign p = site.data.projects | where: "id", "md-and-a-change" | first %}
+      {% include project-card.html p=p %}
 
       <div class="project-card">
         <h3>Multi-agent financial fact-checking</h3>
@@ -109,17 +100,8 @@ description: Connecting data, technology, and business decisions through predict
         <span class="status-tag">{{ p.status }} · {{ p.year }}</span>
       </div>
 
-      <div class="project-card">
-        <h3>Revision-aware financial information retrieval</h3>
-        <dl>
-          <dt>Business problem</dt><dd>Can a system surface exactly what changed in a disclosure, instead of making a reader reread the whole document?</dd>
-          <dt>Data</dt><dd>Paired year-over-year MD&amp;A filings</dd>
-          <dt>Methods</dt><dd>Dense retrieval, retrieval-augmented generation</dd>
-          <dt>Practical value</dt><dd>Speeds up analyst and auditor review of disclosure changes.</dd>
-        </dl>
-        {% assign p = site.data.projects | where: "id", "revision-aware-retrieval" | first %}
-        <span class="status-tag">{{ p.status }}</span>
-      </div>
+      {% assign p = site.data.projects | where: "id", "revision-aware-retrieval" | first %}
+      {% include project-card.html p=p %}
     </div>
   </div>
 </section>

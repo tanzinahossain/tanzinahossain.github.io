@@ -53,37 +53,11 @@ description: Developing computational methods to measure semantic change, evalua
       <p style="color:var(--text-muted); max-width:42rem">Three studies from my dissertation, <em>Computational Analysis of Corporate Disclosures: Measuring Change, Identifying Novel Information, and Retrieving Evidence from MD&amp;A</em>.</p>
     </div>
     <div class="card-grid">
-      <div class="project-card">
-        <h3>Contextual MD&amp;A Change</h3>
-        <dl>
-          <dt>Problem</dt><dd>Develops a semantic measure of year-over-year disclosure change using section alignment, contextual embeddings, chunk matching, and document-level aggregation.</dd>
-          <dt>Dataset</dt><dd>Year-over-year MD&amp;A sections of U.S. corporate filings</dd>
-        </dl>
-        {% assign p = site.data.projects | where: "id", "md-and-a-change" | first %}
-        <span class="status-tag">{{ p.status }}</span>
-      </div>
-
-      <div class="project-card">
-        {% assign p = site.data.projects | where: "id", "peer-adjusted-novelty" | first %}
-        <h3>{{ p.title }}</h3>
-        <dl>
-          <dt>Problem</dt><dd>{{ p.question }}</dd>
-          <dt>Methods</dt><dd>{{ p.methods }}</dd>
-          <dt>Dataset</dt><dd>{{ p.data }}</dd>
-        </dl>
-        <span class="status-tag">{{ p.status }}</span>
-      </div>
-
-      <div class="project-card">
-        {% assign p = site.data.projects | where: "id", "revision-aware-retrieval" | first %}
-        <h3>{{ p.title }}</h3>
-        <dl>
-          <dt>Problem</dt><dd>{{ p.question }}</dd>
-          <dt>Methods</dt><dd>{{ p.methods }}</dd>
-          <dt>Dataset</dt><dd>{{ p.data }}</dd>
-        </dl>
-        <span class="status-tag">{{ p.status }}</span>
-      </div>
+      {% assign diss_ids = "md-and-a-change,peer-adjusted-novelty,revision-aware-retrieval" | split: "," %}
+      {% for id in diss_ids %}
+        {% assign p = site.data.projects | where: "id", id | first %}
+        {% include project-card.html p=p %}
+      {% endfor %}
     </div>
   </div>
 </section>
