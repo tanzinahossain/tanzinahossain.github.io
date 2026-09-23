@@ -113,6 +113,23 @@ h1{margin-bottom:.3rem}
 .plinks{margin-top:.4rem; font-size:.82rem}
 .plinks a{margin-right:1rem}
 
+/* ===== Citation chips and expandable Cite box ===== */
+.chips{display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.6rem}
+.chip{
+  font-family:var(--sans); font-size:.68rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  border:1px solid var(--border); background:none; color:var(--text-muted);
+  padding:3px 10px; cursor:pointer; text-decoration:none; transition:all .2s; display:inline-block; border-radius:3px;
+}
+.chip:hover{border-color:var(--teal); color:var(--teal); background:rgba(44,122,123,.06); text-decoration:none}
+.chip.open{border-color:var(--teal); color:var(--teal); background:rgba(44,122,123,.06)}
+.citebox{margin-top:.7rem; border:1px solid var(--border); background:var(--gray)}
+.citeblock{padding:.7rem .8rem; border-bottom:1px solid var(--border)}
+.citeblock:last-child{border-bottom:0}
+.citehead{display:flex; align-items:center; justify-content:space-between; gap:.75rem; margin-bottom:.4rem}
+.citehead span{font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--teal)}
+.citebox pre{margin:0; font-family:monospace; font-size:.72rem; line-height:1.6; white-space:pre-wrap; word-break:break-word; color:var(--text-muted)}
+[hidden]{display:none !important}
+
 /* ===== Footer ===== */
 .site-footer{background:var(--navy); color:var(--gray); padding:2.5rem 0; margin-top:2rem}
 .site-footer .wrap{display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap}

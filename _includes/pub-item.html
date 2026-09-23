@@ -1,11 +1,24 @@
 {% comment %}
-  Renders one publication list row. Usage: {% include pub-item.html pub=item %}
+  Renders one publication list row with a Cite toggle (APA + BibTeX, each
+  with a Copy button), matching the old design. Usage:
+  {% include pub-item.html pub=item %}
 {% endcomment %}
 <div class="pub-item">
   <div class="pt">{{ include.pub.title }}</div>
   <div class="pa">{{ include.pub.authors }}</div>
   <div class="pv">{{ include.pub.venue }}{% if include.pub.year %} · {{ include.pub.year }}{% endif %}{% if include.pub.status == "Forthcoming" %} · Forthcoming{% endif %}</div>
-  {% if include.pub.doi %}
-  <div class="plinks"><a href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a></div>
-  {% endif %}
+  <div class="chips">
+    {% if include.pub.doi %}<a class="chip" href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+    <button class="chip" type="button" data-cite-toggle="cite-{{ include.pub.id }}">Cite</button>
+  </div>
+  <div class="citebox" id="cite-{{ include.pub.id }}" hidden>
+    <div class="citeblock">
+      <div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa-{{ include.pub.id }}">Copy</button></div>
+      <pre id="apa-{{ include.pub.id }}">{{ include.pub.apa }}</pre>
+    </div>
+    <div class="citeblock">
+      <div class="citehead"><span>BibTeX</span><button class="chip" type="button" data-copy="bib-{{ include.pub.id }}">Copy</button></div>
+      <pre id="bib-{{ include.pub.id }}">{{ include.pub.bibtex }}</pre>
+    </div>
+  </div>
 </div>

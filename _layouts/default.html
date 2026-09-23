@@ -14,5 +14,30 @@
 {% include header.html %}
 {{ content }}
 {% include footer.html %}
+
+<script>
+/* cite toggles */
+document.addEventListener("click", function(e){
+  var b = e.target.closest("[data-cite-toggle]");
+  if(!b) return;
+  var box = document.getElementById(b.getAttribute("data-cite-toggle"));
+  if(!box) return;
+  var show = box.hidden;
+  box.hidden = !show;
+  b.classList.toggle("open", show);
+  b.textContent = show ? "Hide" : "Cite";
+});
+
+/* copy citation text */
+document.addEventListener("click", function(e){
+  var b = e.target.closest("[data-copy]");
+  if(!b) return;
+  var el = document.getElementById(b.getAttribute("data-copy"));
+  if(!el) return;
+  var done = function(msg){ var o = b.textContent; b.textContent = msg; setTimeout(function(){ b.textContent = o; }, 1600); };
+  if(navigator.clipboard){ navigator.clipboard.writeText(el.textContent).then(function(){ done("Copied"); }, function(){ done("Select & copy"); }); }
+  else { done("Select & copy"); }
+});
+</script>
 </body>
 </html>

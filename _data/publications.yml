@@ -8,6 +8,15 @@
   status: Forthcoming
   doi:
   tags: [nlp, ml, analytics]
+  apa: "Rashid, M., Hong, L., Hossain, T., Wang, N., Hossain, K. S. M. T., Ye, G., &amp; Ryan, S. (2026). Fin-Debate: A multi-agent LLM framework for automated fact-checking in the financial domain. Information Processing &amp; Management."
+  bibtex: |
+    @article{rashid2026findebate,
+      author  = {Rashid, M. and Hong, L. and Hossain, T. and Wang, N. and Hossain, K. S. M. T. and Ye, G. and Ryan, S.},
+      title   = {Fin-Debate: A multi-agent LLM framework for automated fact-checking in the financial domain},
+      journal = {Information Processing &amp; Management},
+      year    = {2026},
+      note    = {Forthcoming}
+    }
 
 - id: finnlp-taskaware
   title: "Task-aware methods for multilingual financial NLP"
@@ -17,6 +26,15 @@
   status: Forthcoming
   doi:
   tags: [nlp, ml, analytics]
+  apa: "Rashid, M., Hossain, T., Song, X., &amp; Hong, L. (2026). Task-aware methods for multilingual financial NLP. Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics."
+  bibtex: |
+    @inproceedings{rashid2026taskaware,
+      author  = {Rashid, M. and Hossain, T. and Song, X. and Hong, L.},
+      title   = {Task-aware methods for multilingual financial NLP},
+      booktitle = {Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics},
+      year    = {2026},
+      note    = {Forthcoming}
+    }
 
 - id: esg-prediction
   title: "Are industry sectors critical for ESG score prediction? Evidence from the U.S. manufacturing and service sectors using machine learning methods"
@@ -26,6 +44,15 @@
   status: Published
   doi: "10.1002/jcaf.70052"
   tags: [esg, ml, finance, analytics]
+  apa: "Hossain, T., Malik, M., Hossain, K. S. M. T., &amp; Ryan, S. (2026). Are industry sectors critical for ESG score prediction? Evidence from the U.S. manufacturing and service sectors using machine learning methods. Journal of Corporate Accounting &amp; Finance. https://doi.org/10.1002/jcaf.70052"
+  bibtex: |
+    @article{hossain2026are,
+      author  = {Hossain, T. and Malik, M. and Hossain, K. S. M. T. and Ryan, S.},
+      title   = {Are industry sectors critical for ESG score prediction? Evidence from the U.S. manufacturing and service sectors using machine learning methods},
+      journal = {Journal of Corporate Accounting &amp; Finance},
+      year    = {2026},
+      doi     = {10.1002/jcaf.70052}
+    }
 
 - id: fintech-adoption
   title: "Predicting FinTech adoption: Evidence from an emerging market"
@@ -35,6 +62,15 @@
   status: Published
   doi: "10.1177/09722629251352696"
   tags: [fintech, finance, analytics]
+  apa: "Mahmud, I., Hossain, T., Mahmud, A., Akter, R., Rahman, S., &amp; Begum, A. (2025). Predicting FinTech adoption: Evidence from an emerging market. Vision: The Journal of Business Perspective. https://doi.org/10.1177/09722629251352696"
+  bibtex: |
+    @article{mahmud2025predicting,
+      author  = {Mahmud, I. and Hossain, T. and Mahmud, A. and Akter, R. and Rahman, S. and Begum, A.},
+      title   = {Predicting FinTech adoption: Evidence from an emerging market},
+      journal = {Vision: The Journal of Business Perspective},
+      year    = {2025},
+      doi     = {10.1177/09722629251352696}
+    }
 
 - id: board-gender-diversity
   title: "The impact of board gender diversity on the financing costs of microfinance institutions: Global evidence"
@@ -44,6 +80,15 @@
   status: Published
   doi: "10.1108/JFRA-04-2022-0125"
   tags: [finance, accounting]
+  apa: "Mia, M. A., Hossain, T., Nesa, Z., Saifullah, M. K., Akter, R., &amp; Hossain, M. I. (2025). The impact of board gender diversity on the financing costs of microfinance institutions: Global evidence. Journal of Financial Reporting and Accounting, 23(3), 876–901. https://doi.org/10.1108/JFRA-04-2022-0125"
+  bibtex: |
+    @article{mia2025the,
+      author  = {Mia, M. A. and Hossain, T. and Nesa, Z. and Saifullah, M. K. and Akter, R. and Hossain, M. I.},
+      title   = {The impact of board gender diversity on the financing costs of microfinance institutions: Global evidence},
+      journal = {Journal of Financial Reporting and Accounting, 23(3), 876–901},
+      year    = {2025},
+      doi     = {10.1108/JFRA-04-2022-0125}
+    }
 
 - id: behavioral-investment
   title: "Exploring the influence of behavioral aspects on stock investment decision-making: A study on Bangladeshi individual investors"
@@ -53,6 +98,15 @@
   status: Published
   doi: "10.1108/PRR-10-2021-0054"
   tags: [finance]
+  apa: "Hossain, T., &amp; Siddiqua, P. (2024). Exploring the influence of behavioral aspects on stock investment decision-making: A study on Bangladeshi individual investors. PSU Research Review, 8(2), 467–483. https://doi.org/10.1108/PRR-10-2021-0054"
+  bibtex: |
+    @article{hossain2024exploring,
+      author  = {Hossain, T. and Siddiqua, P.},
+      title   = {Exploring the influence of behavioral aspects on stock investment decision-making: A study on Bangladeshi individual investors},
+      journal = {PSU Research Review, 8(2), 467–483},
+      year    = {2024},
+      doi     = {10.1108/PRR-10-2021-0054}
+    }
 
 - id: investment-psychology
   title: "Insights on investment psychology of individual investors at Dhaka Stock Exchange during the COVID-19 pandemic"
@@ -62,6 +116,15 @@
   status: Published
   doi: "10.30997/ijsr.v5i1.244"
   tags: [finance]
+  apa: "Muzareba, A. M., Hossain, T., &amp; Nesa, Z. (2023). Insights on investment psychology of individual investors at Dhaka Stock Exchange during the COVID-19 pandemic. Indonesian Journal of Social Research, 5(1), 79–90. https://doi.org/10.30997/ijsr.v5i1.244"
+  bibtex: |
+    @article{muzareba2023insights,
+      author  = {Muzareba, A. M. and Hossain, T. and Nesa, Z.},
+      title   = {Insights on investment psychology of individual investors at Dhaka Stock Exchange during the COVID-19 pandemic},
+      journal = {Indonesian Journal of Social Research, 5(1), 79–90},
+      year    = {2023},
+      doi     = {10.30997/ijsr.v5i1.244}
+    }
 
 - id: financial-decision-forecasting
   title: "Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective"
@@ -71,6 +134,14 @@
   status: Published
   doi:
   tags: [finance]
+  apa: "Shahriar, M. S., Hasan, K. B. M. R., Hossain, T., Beg, T. H., Islam, K. M. A., &amp; Zayed, N. M. (2021). Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective. Academy of Entrepreneurship Journal, 27(4), 1–7."
+  bibtex: |
+    @article{shahriar2021financial,
+      author  = {Shahriar, M. S. and Hasan, K. B. M. R. and Hossain, T. and Beg, T. H. and Islam, K. M. A. and Zayed, N. M.},
+      title   = {Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective},
+      journal = {Academy of Entrepreneurship Journal, 27(4), 1–7},
+      year    = {2021}
+    }
 
 - id: mutual-funds-bangladesh
   title: "Performance evaluation of mutual funds in Bangladesh"
@@ -80,6 +151,14 @@
   status: Published
   doi:
   tags: [finance]
+  apa: "Hossain, T., &amp; Nesa, Z. (2011). Performance evaluation of mutual funds in Bangladesh. Journal of Finance and Banking, 9(1), 157–176."
+  bibtex: |
+    @article{hossain2011performance,
+      author  = {Hossain, T. and Nesa, Z.},
+      title   = {Performance evaluation of mutual funds in Bangladesh},
+      journal = {Journal of Finance and Banking, 9(1), 157–176},
+      year    = {2011}
+    }
 
 - id: islamic-credit-card
   title: "Islamic credit card: A prospective in Islamic banking in Bangladesh"
@@ -89,6 +168,14 @@
   status: Published
   doi:
   tags: [finance]
+  apa: "Hossain, T. (2010). Islamic credit card: A prospective in Islamic banking in Bangladesh. Journal of Banking &amp; Financial Services, 4(1–2)."
+  bibtex: |
+    @article{hossain2010islamic,
+      author  = {Hossain, T.},
+      title   = {Islamic credit card: A prospective in Islamic banking in Bangladesh},
+      journal = {Journal of Banking & Financial Services, 4(1–2)},
+      year    = {2010}
+    }
 
 - id: categorization-share-price
   title: "Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange"
@@ -98,6 +185,14 @@
   status: Published
   doi:
   tags: [finance]
+  apa: "Hossain, T. (2008). Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange. DIU Journal of Business and Economics, 3(1)."
+  bibtex: |
+    @article{hossain2008does,
+      author  = {Hossain, T.},
+      title   = {Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange},
+      journal = {DIU Journal of Business and Economics, 3(1)},
+      year    = {2008}
+    }
 
 - id: remittance-book
   title: "Remittance issues & practices: A Bangladesh perspective"
@@ -107,3 +202,11 @@
   status: Book
   doi:
   tags: [finance]
+  apa: "Hossain, T. (2012). Remittance issues &amp; practices: A Bangladesh perspective. LAP LAMBERT Academic Publishing GmbH &amp; Co. KG, Germany."
+  bibtex: |
+    @book{hossain2012remittance,
+      author  = {Hossain, T.},
+      title   = {Remittance issues &amp; practices: A Bangladesh perspective},
+      publisher = {LAP LAMBERT Academic Publishing GmbH &amp; Co. KG, Germany},
+      year    = {2012}
+    }
