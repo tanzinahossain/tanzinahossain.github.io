@@ -47,17 +47,25 @@ section + section{border-top:1px solid var(--border)}
 .hero{background:var(--gray); padding:4rem 0}
 .hero-grid{display:flex; gap:3rem; align-items:center; flex-wrap:wrap}
 .hero-photo{width:9.5rem; height:9.5rem; border-radius:50%; object-fit:cover; border:3px solid var(--white); box-shadow:0 1px 3px rgba(23,42,58,.15); flex:none}
-.hero-photo-col{display:flex; flex-direction:column; align-items:center; gap:1.4rem; flex:none}
+.hero-photo-col{display:flex; flex-direction:column; align-items:center; gap:1.8rem; flex:none}
 .hero-social{display:flex; align-items:center; border:1px solid var(--border); border-radius:4px; overflow:hidden; background:var(--white)}
-.hero-social a{display:flex; align-items:center; justify-content:center; padding:.55rem .8rem; font-size:.78rem; font-weight:500; color:var(--blue); border-right:1px solid var(--border)}
+.hero-social a{display:flex; align-items:center; justify-content:center; width:2.6rem; height:2.4rem; color:var(--blue); border-right:1px solid var(--border); transition:background .2s, color .2s}
 .hero-social a:last-child{border-right:0}
 .hero-social a:hover{background:var(--gray); color:var(--teal); text-decoration:none}
+.hero-social svg{width:17px; height:17px}
 .hero-text{flex:1 1 22rem; min-width:0}
 .hero-text .kicker{font-family:var(--sans); font-size:.85rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--teal); margin-bottom:.5rem}
 .hero-text h1{margin-bottom:.3rem}
 .hero-text .role{font-size:1.15rem; color:var(--blue); font-weight:500; margin-bottom:1rem}
 .hero-text .lede{font-size:1.05rem; color:var(--text-muted); max-width:42rem}
 .hero-actions{display:flex; gap:.9rem; flex-wrap:wrap; margin-top:1.5rem}
+
+/* ===== Stat tiles ===== */
+.stats{display:grid; grid-template-columns:repeat(4, minmax(6rem,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:2rem; max-width:32rem}
+.stat{background:var(--white); padding:.9rem .7rem}
+.stat .sv2{font-family:var(--serif); font-weight:700; font-size:1.7rem; line-height:1; color:var(--teal); font-variant-numeric:tabular-nums}
+.stat .sl{font-size:.62rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--text-muted); margin-top:.5rem; line-height:1.4}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr); margin-left:auto; margin-right:auto}}
 
 .btn{display:inline-block; padding:.6rem 1.3rem; border-radius:4px; font-size:.92rem; font-weight:600; border:1px solid var(--navy)}
 .btn-primary{background:var(--navy); color:var(--white)}
