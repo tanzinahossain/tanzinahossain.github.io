@@ -1,0 +1,12 @@
+{% comment %}
+  Renders one research-project card. Usage: {% include project-card.html p=item %}
+{% endcomment %}
+<div class="project-card">
+  <h3>{{ include.p.title }}</h3>
+  <dl>
+    <dt>Question</dt><dd>{{ include.p.question }}</dd>
+    <dt>Methods</dt><dd>{{ include.p.methods }}</dd>
+    <dt>Data</dt><dd>{{ include.p.data }}</dd>
+  </dl>
+  <span class="status-tag">{{ include.p.status }}</span>
+</div>

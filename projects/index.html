@@ -1,0 +1,18 @@
+---
+layout: default
+title: Projects
+description: Working papers and research in progress.
+---
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Projects</div>
+      <h2>Working papers &amp; research in progress</h2>
+    </div>
+    <div class="card-grid">
+      {% for p in site.data.projects %}
+        {% include project-card.html p=p %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

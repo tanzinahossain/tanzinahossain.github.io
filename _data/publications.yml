@@ -1,0 +1,109 @@
+# Full publication record. Shared by the homepage, /publications, and the
+# three tailored landing pages — edit an entry once, it updates everywhere.
+- id: findebate
+  title: "Fin-Debate: A multi-agent LLM framework for automated fact-checking in the financial domain"
+  authors: "Rashid, M., Hong, L., <strong>Hossain, T.</strong>, Wang, N., Hossain, K. S. M. T., Ye, G., & Ryan, S."
+  venue: "Information Processing & Management (special issue: Trustworthy Content Governance and Safe Generative AI)"
+  year: 2026
+  status: Forthcoming
+  doi:
+  tags: [nlp, ml, analytics]
+
+- id: finnlp-taskaware
+  title: "Task-aware methods for multilingual financial NLP"
+  authors: "Rashid, M., <strong>Hossain, T.</strong>, Song, X., & Hong, L."
+  venue: "Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics"
+  year: 2026
+  status: Forthcoming
+  doi:
+  tags: [nlp, ml, analytics]
+
+- id: esg-prediction
+  title: "Are industry sectors critical for ESG score prediction? Evidence from the U.S. manufacturing and service sectors using machine learning methods"
+  authors: "<strong>Hossain, T.</strong>, Malik, M., Hossain, K. S. M. T., & Ryan, S."
+  venue: "Journal of Corporate Accounting & Finance"
+  year: 2026
+  status: Published
+  doi: "10.1002/jcaf.70052"
+  tags: [esg, ml, finance, analytics]
+
+- id: fintech-adoption
+  title: "Predicting FinTech adoption: Evidence from an emerging market"
+  authors: "Mahmud, I., <strong>Hossain, T.</strong>, Mahmud, A., Akter, R., Rahman, S., & Begum, A."
+  venue: "Vision: The Journal of Business Perspective"
+  year: 2025
+  status: Published
+  doi: "10.1177/09722629251352696"
+  tags: [fintech, finance, analytics]
+
+- id: board-gender-diversity
+  title: "The impact of board gender diversity on the financing costs of microfinance institutions: Global evidence"
+  authors: "Mia, M. A., <strong>Hossain, T.</strong>, Nesa, Z., Saifullah, M. K., Akter, R., & Hossain, M. I."
+  venue: "Journal of Financial Reporting and Accounting, 23(3), 876–901"
+  year: 2025
+  status: Published
+  doi: "10.1108/JFRA-04-2022-0125"
+  tags: [finance, accounting]
+
+- id: behavioral-investment
+  title: "Exploring the influence of behavioral aspects on stock investment decision-making: A study on Bangladeshi individual investors"
+  authors: "<strong>Hossain, T.</strong>, & Siddiqua, P."
+  venue: "PSU Research Review, 8(2), 467–483"
+  year: 2024
+  status: Published
+  doi: "10.1108/PRR-10-2021-0054"
+  tags: [finance]
+
+- id: investment-psychology
+  title: "Insights on investment psychology of individual investors at Dhaka Stock Exchange during the COVID-19 pandemic"
+  authors: "Muzareba, A. M., <strong>Hossain, T.</strong>, & Nesa, Z."
+  venue: "Indonesian Journal of Social Research, 5(1), 79–90"
+  year: 2023
+  status: Published
+  doi: "10.30997/ijsr.v5i1.244"
+  tags: [finance]
+
+- id: financial-decision-forecasting
+  title: "Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective"
+  authors: "Shahriar, M. S., Hasan, K. B. M. R., <strong>Hossain, T.</strong>, Beg, T. H., Islam, K. M. A., & Zayed, N. M."
+  venue: "Academy of Entrepreneurship Journal, 27(4), 1–7"
+  year: 2021
+  status: Published
+  doi:
+  tags: [finance]
+
+- id: mutual-funds-bangladesh
+  title: "Performance evaluation of mutual funds in Bangladesh"
+  authors: "<strong>Hossain, T.</strong>, & Nesa, Z."
+  venue: "Journal of Finance and Banking, 9(1), 157–176"
+  year: 2011
+  status: Published
+  doi:
+  tags: [finance]
+
+- id: islamic-credit-card
+  title: "Islamic credit card: A prospective in Islamic banking in Bangladesh"
+  authors: "<strong>Hossain, T.</strong>"
+  venue: "Journal of Banking & Financial Services, 4(1–2)"
+  year: 2010
+  status: Published
+  doi:
+  tags: [finance]
+
+- id: categorization-share-price
+  title: "Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange"
+  authors: "<strong>Hossain, T.</strong>"
+  venue: "DIU Journal of Business and Economics, 3(1)"
+  year: 2008
+  status: Published
+  doi:
+  tags: [finance]
+
+- id: remittance-book
+  title: "Remittance issues & practices: A Bangladesh perspective"
+  authors: "<strong>Hossain, T.</strong>"
+  venue: "LAP LAMBERT Academic Publishing GmbH & Co. KG, Germany · ISBN 978-3-659-10681-1"
+  year: 2012
+  status: Book
+  doi:
+  tags: [finance]

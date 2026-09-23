@@ -1,0 +1,20 @@
+title: Tanzina Hossain
+description: Finance educator and computational business researcher — corporate disclosure, financial NLP, and information retrieval.
+url: "https://tanzinahossain.github.io"
+author: Tanzina Hossain
+email: ematanzina@gmail.com
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - "*.bak"
+  - Tanzina_Hossain_Academic_CV.pdf

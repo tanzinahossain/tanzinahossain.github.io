@@ -1,0 +1,32 @@
+---
+layout: default
+title: Publications
+description: Full publication record — journal articles, forthcoming work, and book.
+---
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Publications</div>
+      <h2>Full record</h2>
+    </div>
+
+    <h3>Forthcoming</h3>
+    <div class="pub-list" style="margin-bottom:2.5rem">
+      {% assign forthcoming = site.data.publications | where: "status", "Forthcoming" %}
+      {% for pub in forthcoming %}{% include pub-item.html pub=pub %}{% endfor %}
+    </div>
+
+    <h3>Peer-Reviewed Journal Articles</h3>
+    <div class="pub-list" style="margin-bottom:2.5rem">
+      {% assign published = site.data.publications | where: "status", "Published" %}
+      {% assign published = published | sort: "year" | reverse %}
+      {% for pub in published %}{% include pub-item.html pub=pub %}{% endfor %}
+    </div>
+
+    <h3>Book</h3>
+    <div class="pub-list">
+      {% assign book = site.data.publications | where: "status", "Book" %}
+      {% for pub in book %}{% include pub-item.html pub=pub %}{% endfor %}
+    </div>
+  </div>
+</section>

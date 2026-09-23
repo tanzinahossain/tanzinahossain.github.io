@@ -1,0 +1,38 @@
+# Working papers / research in progress. Real titles and authorship from the
+# CV — question/methods/data lines are honest high-level summaries, not
+# unpublished numerical findings.
+- id: md-and-a-change
+  title: "Contextual measurement of year-over-year MD&A change"
+  full_title: "When words change meaning: Contextual embeddings for measuring MD&A disclosure change"
+  authors: "Hossain, T., Hossain, E., Hossain, K. S. M. T., & Ryan, S."
+  question: "Does the meaning of a firm's MD&A disclosure — not just its wording — shift meaningfully from one year to the next?"
+  methods: "Contextual text embeddings, section alignment, semantic-similarity measurement"
+  data: "Year-over-year MD&A sections of U.S. corporate filings"
+  status: "Working paper"
+
+- id: peer-adjusted-novelty
+  title: "Peer-adjusted novelty in MD&A revisions"
+  full_title: "Peer-adjusted novelty and the informational value of MD&A revisions"
+  authors: "Hossain, T., Malik, M., & Ryan, S."
+  question: "Is a revision to a firm's disclosure actually informative, or does it just restate what peer firms already said?"
+  methods: "Peer-benchmarked novelty scoring, textual comparison across filings"
+  data: "MD&A revisions relative to industry-peer disclosures"
+  status: "Working paper"
+
+- id: revision-aware-retrieval
+  title: "Revision-aware retrieval of financial evidence"
+  full_title: "Finding what changed: Revision-aware retrieval of year-over-year MD&A changes"
+  authors: "Hossain, T., & Ryan, S."
+  question: "Can a retrieval system surface exactly the passages that changed between two years of a firm's disclosure, rather than the whole document?"
+  methods: "Dense retrieval, retrieval-augmented generation, change localization"
+  data: "Paired year-over-year MD&A filings"
+  status: "Working paper"
+
+- id: ai-litigation-risk
+  title: "AI investment and corporate litigation risk"
+  full_title: "Does artificial intelligence reduce corporate litigation risk? Evidence from firm-level litigation"
+  authors: "Hossain, T., & Hossain, E."
+  question: "Is a firm's investment in AI associated with its exposure to litigation risk?"
+  methods: "Firm-level econometric analysis"
+  data: "Firm-level litigation and AI-investment records"
+  status: "Working paper"

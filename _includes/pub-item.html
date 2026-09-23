@@ -1,0 +1,11 @@
+{% comment %}
+  Renders one publication list row. Usage: {% include pub-item.html pub=item %}
+{% endcomment %}
+<div class="pub-item">
+  <div class="pt">{{ include.pub.title }}</div>
+  <div class="pa">{{ include.pub.authors }}</div>
+  <div class="pv">{{ include.pub.venue }}{% if include.pub.year %} · {{ include.pub.year }}{% endif %}{% if include.pub.status == "Forthcoming" %} · Forthcoming{% endif %}</div>
+  {% if include.pub.doi %}
+  <div class="plinks"><a href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a></div>
+  {% endif %}
+</div>
