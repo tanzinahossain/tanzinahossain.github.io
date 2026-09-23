@@ -82,11 +82,11 @@ section + section{border-top:1px solid var(--border)}
 .pub-list{display:flex; flex-direction:column; gap:1.1rem}
 .pub-item{border-bottom:1px solid var(--border); padding-bottom:1.1rem}
 .pub-item:last-child{border-bottom:0; padding-bottom:0}
-.pub-item .pt{font-weight:600; margin-bottom:.25rem}
-.pub-item .pa{font-size:.88rem; color:var(--text-muted); margin-bottom:.15rem}
-.pub-item .pv{font-size:.85rem; color:var(--text-muted); font-style:italic}
-.pub-item .plinks{margin-top:.4rem; font-size:.82rem}
-.pub-item .plinks a{margin-right:1rem}
+.pt{font-weight:600; margin-bottom:.25rem}
+.pa{font-size:.88rem; color:var(--text-muted); margin-bottom:.15rem}
+.pv{font-size:.85rem; color:var(--text-muted); font-style:italic}
+.plinks{margin-top:.4rem; font-size:.82rem}
+.plinks a{margin-right:1rem}
 
 /* ===== Footer ===== */
 .site-footer{background:var(--navy); color:var(--gray); padding:2.5rem 0; margin-top:2rem}
