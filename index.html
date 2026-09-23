@@ -5,10 +5,17 @@ description: Finance educator and computational business researcher — corporat
 ---
 
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-photo-col">
+  <div class="wrap profile-grid">
+    <div class="profile-col">
       <img class="hero-photo" src="{{ '/portrait.png' | relative_url }}" alt="Tanzina Hossain">
-      <div class="hero-social">
+      <h1>Tanzina Hossain</h1>
+      <div class="role">Finance Educator and Computational Business Researcher</div>
+      <p class="lede">I am a PhD candidate in Information Science with a Data Science concentration at the University of North Texas and an Associate Professor of Finance at Daffodil International University. My research combines finance and accounting questions with econometrics, machine learning, natural language processing and information retrieval.</p>
+
+      <div class="group-label" style="margin-top:1.6rem">Teaching Areas</div>
+      <p style="color:var(--text-muted); margin:0">Finance · Investments · Business Analytics · Financial Analytics · Business Statistics · Data Visualization · Research Methods</p>
+
+      <div class="hero-social" style="margin-top:1.6rem">
         <a href="mailto:ematanzina@gmail.com" title="Email" aria-label="Email">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
         </a>
@@ -26,114 +33,29 @@ description: Finance educator and computational business researcher — corporat
         </a>
       </div>
     </div>
-    <div class="hero-text">
-      <h1>Tanzina Hossain</h1>
-      <div class="role">Finance Educator and Computational Business Researcher</div>
-      <p class="lede">I study corporate disclosures, financial decision-making, and business information using econometrics, machine learning, and natural language processing. I welcome opportunities to collaborate on research involving finance, accounting, data analytics, and emerging AI methods.</p>
+
+    <div class="research-col">
+      <div class="group-label" style="margin-top:0">Research Areas</div>
+      <ul class="plain-list">
+        <li><strong>Corporate Disclosure and Financial Reporting</strong></li>
+        <li><strong>Financial and Business Analytics</strong></li>
+        <li><strong>Natural Language Processing and Large Language Models</strong></li>
+        <li><strong>Information Retrieval and Evidence Discovery</strong></li>
+      </ul>
+
+      <div class="stats" id="stats">
+        <div class="stat"><div class="sv2">9</div><div class="sl">Peer-reviewed<br>articles</div></div>
+        <div class="stat"><div class="sv2">2</div><div class="sl">Forthcoming<br>papers</div></div>
+        <div class="stat"><div class="sv2">16+</div><div class="sl">Years university<br>teaching</div></div>
+        <div class="stat"><div class="sv2">100+</div><div class="sl">Theses &amp; reports<br>supervised</div></div>
+      </div>
+
+      <p style="color:var(--text-muted); font-size:.88rem; margin-top:1.5rem"><strong style="color:var(--navy)">Methods and Tools:</strong> Python, R, Stata, machine learning, NLP, LLMs, information retrieval, Tableau, Power BI, WRDS, Compustat and CRSP.</p>
+
       <div class="hero-actions">
         <a class="btn btn-primary" href="{{ '/research/' | relative_url }}">View Research</a>
-        <a class="btn btn-ghost" href="{{ '/teaching/' | relative_url }}">View Teaching</a>
-      </div>
-      <div class="stats" id="stats">
-        <div class="stat"><div class="sv2" data-count="9">0</div><div class="sl">Peer-reviewed<br>articles</div></div>
-        <div class="stat"><div class="sv2" data-count="2">0</div><div class="sl">Forthcoming<br>papers</div></div>
-        <div class="stat"><div class="sv2" data-count="16" data-suffix="+">0</div><div class="sl">Years university<br>teaching</div></div>
-        <div class="stat"><div class="sv2" data-count="100" data-suffix="+">0</div><div class="sl">Theses &amp; reports<br>supervised</div></div>
+        <a class="btn btn-ghost" href="{{ '/publications/' | relative_url }}">View Publications</a>
       </div>
     </div>
-  </div>
-</section>
-
-<script>
-(function(){
-  var statsEl = document.getElementById("stats");
-  if(!statsEl) return;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function runStats(){
-    Array.prototype.forEach.call(statsEl.querySelectorAll("[data-count]"), function(el){
-      var target = Number(el.dataset.count), suffix = el.dataset.suffix || "";
-      if(reduce){ el.textContent = target + suffix; return; }
-      var t0 = performance.now(), dur = 950;
-      function tick(now){
-        var p = Math.min(1, (now - t0) / dur);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + (p === 1 ? suffix : "");
-        if(p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-  }
-  new IntersectionObserver(function(es, o){
-    es.forEach(function(en){ if(en.isIntersecting){ runStats(); o.disconnect(); } });
-  }, {threshold:.4}).observe(statsEl);
-})();
-</script>
-
-<section id="research">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Research Areas</div>
-      <h2>Where my work sits</h2>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Corporate Disclosure &amp; Financial Reporting</h3>
-        <p>How firms communicate financial and non-financial information, and what that communication reveals.</p>
-      </div>
-      <div class="card">
-        <h3>Financial &amp; Business Analytics</h3>
-        <p>Applying data-driven and predictive methods to finance, ESG, and business decision problems.</p>
-      </div>
-      <div class="card">
-        <h3>Natural Language Processing &amp; Large Language Models</h3>
-        <p>Using contextual embeddings and LLMs to analyze financial and business text at scale.</p>
-      </div>
-      <div class="card">
-        <h3>Information Retrieval &amp; Evidence Discovery</h3>
-        <p>Retrieving the specific evidence that matters from large document collections.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Featured Research</div>
-      <h2>Current projects</h2>
-    </div>
-    <div class="card-grid">
-      {% assign featured_ids = "md-and-a-change,peer-adjusted-novelty,revision-aware-retrieval" | split: "," %}
-      {% for id in featured_ids %}
-        {% assign p = site.data.projects | where: "id", id | first %}
-        {% include project-card.html p=p %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section id="teaching">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Teaching</div>
-      <h2>Teaching profile</h2>
-    </div>
-    <p class="lede">I bring sixteen years of university teaching in finance, investments, banking, research methods, and quantitative subjects. My current teaching interests extend to business analytics, financial analytics, data visualization, and applied artificial intelligence.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Selected Publications</div>
-      <h2>A cross-section of the work</h2>
-    </div>
-    <div class="pub-list">
-      {% assign featured_pub_ids = "esg-prediction,fintech-adoption,finnlp-taskaware,findebate,board-gender-diversity" | split: "," %}
-      {% for id in featured_pub_ids %}
-        {% assign pub = site.data.publications | where: "id", id | first %}
-        {% include pub-item.html pub=pub %}
-      {% endfor %}
-    </div>
-    <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="{{ '/publications/' | relative_url }}">View All Publications</a></p>
   </div>
 </section>
