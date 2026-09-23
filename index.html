@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tanzina Hossain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +30,7 @@
 }
 *{box-sizing:border-box}
 body{
+  margin:0;
   background:var(--back-primary); color:var(--ink);
   font-family:var(--body); font-size:16px; line-height:1.6;
   -webkit-font-smoothing:antialiased;
@@ -33,7 +39,7 @@ h1,h2,h3,h4{margin:0; font-weight:400}
 p{margin:0}
 a{color:inherit}
 html{scroll-behavior:smooth}
-img{display:block}
+img{display:block; max-width:100%}
 .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
 
 /* ---------- ambient background ---------- */
@@ -169,14 +175,14 @@ main{flex-grow:1; padding:2rem 0 0}
 .who .nm{font-family:var(--serif); font-weight:700; font-size:1.5rem; line-height:1.2}
 .who .rl{font-family:var(--body); font-size:.72rem; text-transform:uppercase; letter-spacing:.15em; color:var(--muted); margin-top:.35rem}
 .who .rl2{font-family:var(--body); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-top:.2rem}
-.social{display:flex; align-items:center; border:1px solid rgba(26,26,26,.15); overflow:hidden}
+.social{display:flex; align-items:center; border:1px solid rgba(220,20,60,.22); overflow:hidden}
 .social a{
   display:flex; align-items:center; justify-content:center; width:2.6rem; height:2.4rem;
-  text-decoration:none; border-right:1px solid rgba(26,26,26,.15); color:var(--ink);
+  text-decoration:none; border-right:1px solid rgba(220,20,60,.22); color:var(--accent);
   transition:background .2s, color .2s;
 }
 .social a:last-child{border-right:0}
-.social a:hover{background:var(--back-accent); color:var(--accent)}
+.social a:hover{background:rgba(220,20,60,.10); color:var(--accent)}
 .social svg{width:17px; height:17px}
 
 .edu-list{display:flex; flex-direction:column; gap:.75rem; width:100%}
@@ -287,6 +293,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
   .panel:hover{transform:none}
 }
 </style>
+</head>
+<body>
 
 <div class="texture"></div>
 <div class="washes"><div class="wash wash-1"></div><div class="wash wash-2"></div><div class="wash wash-3"></div></div>
@@ -326,7 +334,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
             <div class="who">
               <div class="nm">Tanzina Hossain</div>
               <div class="rl">PhD Candidate, Information Science</div>
-              <div class="rl2">Financial Data Science &amp; AI Researcher</div>
+              <div class="rl2">Finance Educator &amp; Researcher</div>
             </div>
             <div class="social">
               <a href="mailto:ematanzina@gmail.com" title="Email" aria-label="Email">
@@ -351,7 +359,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
                 <div class="edu">
                   <div class="yr">Expected Spring 2027</div>
                   <div class="dg">PhD, Information Science &mdash; Data Science</div>
-                  <div class="in">University of North Texas</div>
+                  <div class="in">University of North Texas &middot; GPA 3.94/4.00</div>
+                  <div class="in" style="font-style:italic; text-transform:none; letter-spacing:normal; margin-top:.3rem">Dissertation: Computational Analysis of Corporate Disclosures &mdash; Measuring Change, Identifying Novel Information, and Retrieving Evidence from MD&amp;A</div>
                 </div>
                 <div class="edu">
                   <div class="yr">2005</div>
@@ -382,9 +391,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
         <div class="c8">
           <div class="panel">
             <div class="glow"></div>
-            <p class="tagline">Corporate Disclosure, Financial NLP, Evidence Retrieval &amp; Large Language Models</p>
-            <p class="bio">I am an Associate Professor of Finance at Daffodil International University and a PhD candidate in Information Science with a concentration in Data Science at the University of North Texas. My work lies at the intersection of finance, accounting, and information science.</p>
-            <p class="bio">My research examines corporate disclosures, semantic change, information novelty, and evidence retrieval from financial documents. I use natural language processing, machine learning, contextual text embeddings, large language models, and panel-data econometrics to study whether corporate narratives provide meaningful information to investors and other decision-makers.</p>
+            <div class="label-row"><div class="section-label">About Me</div></div>
+            <p class="bio">I am an Associate Professor of Finance at Daffodil International University, currently on study leave, and a PhD candidate in Information Science with a concentration in Data Science at the University of North Texas. My work lies at the intersection of finance, accounting, and data science.</p>
+            <p class="bio">My research examines corporate disclosures, semantic change, information novelty, and evidence retrieval from financial documents. I use natural language processing (NLP), machine learning, large language models (LLMs), and panel-data econometrics to study whether corporate narratives provide meaningful information to investors and other decision-makers.</p>
             <p class="bio">I bring more than sixteen years of university teaching experience in corporate finance, investments, financial markets, and research methods. My teaching connects financial theory and computational methods with practical business decisions.</p>
             <p class="bio">I welcome opportunities to collaborate on research involving finance, accounting, data analytics, and emerging AI methods.</p>
 
@@ -418,9 +427,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
           <div class="mitem" id="publications">
     <div class="panel" id="sec-publications">
                 <div class="label-row">
-                  <div class="section-label">Selected Publications</div>
-                  <span class="count">8 entries</span>
-                <button class="secx" type="button" data-expand="sec-publications" aria-label="Expand Selected Publications" title="Expand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6M15 21h6v-6M3 3l7 7M21 21l-7-7"/></svg></button></div>
+                  <div class="section-label">Research</div>
+                  <span class="count">12 publications</span>
+                <button class="secx" type="button" data-expand="sec-publications" aria-label="Expand Research" title="Expand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6M15 21h6v-6M3 3l7 7M21 21l-7-7"/></svg></button></div>
                             <div class="group"><span class="gt">Forthcoming</span><span class="gl"></span></div>
             <div class="pitem">
               <div class="pt">Fin-Debate: A multi-agent LLM framework for automated fact-checking in the financial domain</div>
@@ -440,13 +449,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
             </div>
             <div class="pitem">
               <div class="pt">Task-aware methods for multilingual financial NLP</div>
-              <div class="pa">Rashid, M., <em class="me">Hossain, T.</em>, Wang, N., &amp; Hong, L.</div>
+              <div class="pa">Rashid, M., <em class="me">Hossain, T.</em>, Song, X., &amp; Hong, L.</div>
               <div class="pv">Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics</div>
               <div class="chips"><button class="chip" type="button" data-cite-toggle="cite2">Cite</button><span class="chip tag">Forthcoming</span></div>
               <div class="citebox" id="cite2" hidden>
-                <div class="citeblock"><div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa2">Copy</button></div><pre id="apa2">Rashid, M., Hossain, T., Wang, N., &amp; Hong, L. (2026). Task-aware methods for multilingual financial NLP. Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics.</pre></div>
+                <div class="citeblock"><div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa2">Copy</button></div><pre id="apa2">Rashid, M., Hossain, T., Song, X., &amp; Hong, L. (2026). Task-aware methods for multilingual financial NLP. Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics.</pre></div>
                 <div class="citeblock"><div class="citehead"><span>BibTeX</span><button class="chip" type="button" data-copy="bib2">Copy</button></div><pre id="bib2">@inproceedings{rashid2026taskaware,
-  author  = {Rashid, M. and Hossain, T. and Wang, N. and Hong, L.},
+  author  = {Rashid, M. and Hossain, T. and Song, X. and Hong, L.},
   title   = {Task-aware methods for multilingual financial NLP},
   booktitle = {Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics},
   year    = {2026},
@@ -535,6 +544,66 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
 }</pre></div>
               </div>
             </div>
+            <div class="pitem">
+              <div class="pt">Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective</div>
+              <div class="pa">Shahriar, M. S., Hasan, K. B. M. R., <em class="me">Hossain, T.</em>, Beg, T. H., Islam, K. M. A., &amp; Zayed, N. M.</div>
+              <div class="pv">Academy of Entrepreneurship Journal, 27(4), 1&ndash;7</div>
+              <div class="chips"><button class="chip" type="button" data-cite-toggle="cite9">Cite</button></div>
+              <div class="citebox" id="cite9" hidden>
+                <div class="citeblock"><div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa9">Copy</button></div><pre id="apa9">Shahriar, M. S., Hasan, K. B. M. R., Hossain, T., Beg, T. H., Islam, K. M. A., &amp; Zayed, N. M. (2021). Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective. Academy of Entrepreneurship Journal, 27(4), 1–7.</pre></div>
+                <div class="citeblock"><div class="citehead"><span>BibTeX</span><button class="chip" type="button" data-copy="bib9">Copy</button></div><pre id="bib9">@article{shahriar2021financial,
+  author  = {Shahriar, M. S. and Hasan, K. B. M. R. and Hossain, T. and Beg, T. H. and Islam, K. M. A. and Zayed, N. M.},
+  title   = {Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective},
+  journal = {Academy of Entrepreneurship Journal, 27(4), 1–7},
+  year    = {2021}
+}</pre></div>
+              </div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Performance evaluation of mutual funds in Bangladesh</div>
+              <div class="pa"><em class="me">Hossain, T.</em>, &amp; Nesa, Z.</div>
+              <div class="pv">Journal of Finance and Banking, 9(1), 157&ndash;176</div>
+              <div class="chips"><button class="chip" type="button" data-cite-toggle="cite10">Cite</button></div>
+              <div class="citebox" id="cite10" hidden>
+                <div class="citeblock"><div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa10">Copy</button></div><pre id="apa10">Hossain, T., &amp; Nesa, Z. (2011). Performance evaluation of mutual funds in Bangladesh. Journal of Finance and Banking, 9(1), 157–176.</pre></div>
+                <div class="citeblock"><div class="citehead"><span>BibTeX</span><button class="chip" type="button" data-copy="bib10">Copy</button></div><pre id="bib10">@article{hossain2011performance,
+  author  = {Hossain, T. and Nesa, Z.},
+  title   = {Performance evaluation of mutual funds in Bangladesh},
+  journal = {Journal of Finance and Banking, 9(1), 157–176},
+  year    = {2011}
+}</pre></div>
+              </div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Islamic credit card: A prospective in Islamic banking in Bangladesh</div>
+              <div class="pa"><em class="me">Hossain, T.</em></div>
+              <div class="pv">Journal of Banking &amp; Financial Services, 4(1&ndash;2)</div>
+              <div class="chips"><button class="chip" type="button" data-cite-toggle="cite11">Cite</button></div>
+              <div class="citebox" id="cite11" hidden>
+                <div class="citeblock"><div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa11">Copy</button></div><pre id="apa11">Hossain, T. (2010). Islamic credit card: A prospective in Islamic banking in Bangladesh. Journal of Banking &amp; Financial Services, 4(1–2).</pre></div>
+                <div class="citeblock"><div class="citehead"><span>BibTeX</span><button class="chip" type="button" data-copy="bib11">Copy</button></div><pre id="bib11">@article{hossain2010islamic,
+  author  = {Hossain, T.},
+  title   = {Islamic credit card: A prospective in Islamic banking in Bangladesh},
+  journal = {Journal of Banking & Financial Services, 4(1–2)},
+  year    = {2010}
+}</pre></div>
+              </div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange</div>
+              <div class="pa"><em class="me">Hossain, T.</em></div>
+              <div class="pv">DIU Journal of Business and Economics, 3(1)</div>
+              <div class="chips"><button class="chip" type="button" data-cite-toggle="cite12">Cite</button></div>
+              <div class="citebox" id="cite12" hidden>
+                <div class="citeblock"><div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa12">Copy</button></div><pre id="apa12">Hossain, T. (2008). Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange. DIU Journal of Business and Economics, 3(1).</pre></div>
+                <div class="citeblock"><div class="citehead"><span>BibTeX</span><button class="chip" type="button" data-copy="bib12">Copy</button></div><pre id="bib12">@article{hossain2008does,
+  author  = {Hossain, T.},
+  title   = {Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange},
+  journal = {DIU Journal of Business and Economics, 3(1)},
+  year    = {2008}
+}</pre></div>
+              </div>
+            </div>
             <div class="group"><span class="gt">Book</span><span class="gl"></span></div>
             <div class="pitem">
               <div class="pt">Remittance issues &amp; practices: A Bangladesh perspective</div>
@@ -550,6 +619,48 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
   year    = {2012}
 }</pre></div>
               </div>
+            </div>
+            <div class="group"><span class="gt">Working Papers &amp; Research in Progress</span><span class="gl"></span></div>
+            <div class="pitem">
+              <div class="pt">When words change meaning: Contextual embeddings for measuring MD&amp;A disclosure change</div>
+              <div class="pa"><em class="me">Hossain, T.</em>, Hossain, E., Hossain, K. S. M. T., &amp; Ryan, S.</div>
+              <div class="chips"><span class="chip tag">Working paper</span></div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Does artificial intelligence reduce corporate litigation risk? Evidence from firm-level litigation</div>
+              <div class="pa"><em class="me">Hossain, T.</em>, &amp; Hossain, E.</div>
+              <div class="chips"><span class="chip tag">Working paper</span></div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Peer-adjusted novelty and the informational value of MD&amp;A revisions</div>
+              <div class="pa"><em class="me">Hossain, T.</em>, Malik, M., &amp; Ryan, S.</div>
+              <div class="chips"><span class="chip tag">Working paper</span></div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Finding what changed: Revision-aware retrieval of year-over-year MD&amp;A changes</div>
+              <div class="pa"><em class="me">Hossain, T.</em>, &amp; Ryan, S.</div>
+              <div class="chips"><span class="chip tag">Working paper</span></div>
+            </div>
+            <div class="group"><span class="gt">Selected Presentations</span><span class="gl"></span></div>
+            <div class="pitem">
+              <div class="pt">Beyond boilerplate: Contextual embeddings for measuring economic change in MD&amp;A disclosures</div>
+              <div class="pa"><em class="me">Hossain, T.</em></div>
+              <div class="pv">College of Information Summer Research Day, University of North Texas &middot; July 2026</div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Predicting ESG ratings for U.S. industries using machine learning: A data-driven approach to Environmental, Social, and Governance evaluation</div>
+              <div class="pa"><em class="me">Hossain, T.</em>, Malik, M., &amp; Ryan, S.</div>
+              <div class="pv">Multi-disciplinary Information Research Symposium, University of North Texas &middot; February 2025</div>
+            </div>
+            <div class="pitem">
+              <div class="pt">How board gender diversity affects financing costs of microfinance institutions: Global evidence</div>
+              <div class="pa">Mia, M. A., <em class="me">Hossain, T.</em>, Nesa, Z., Saifullah, M. K., Akter, R., &amp; Hossain, M. I.</div>
+              <div class="pv">International Conference on Business Management, Macroeconomic Applications and Entrepreneurship Principles &amp; Practices for Sustainable Development, Daffodil International University &middot; March 2022</div>
+            </div>
+            <div class="pitem">
+              <div class="pt">Effect of behavioral characteristics on stock investment decision-making: A study on individual investors in Dhaka Stock Exchange</div>
+              <div class="pa"><em class="me">Hossain, T.</em>, &amp; Siddiqua, P.</div>
+              <div class="pv">International Symposium on Current Approaches &amp; New Trends in Social Sciences, Toros University, Turkey &middot; June 2021</div>
             </div>
               </div>
           </div>
@@ -571,7 +682,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
                     <div class="item"><div class="iy">2026</div><div class="it">Counselor, NexGen Data Leadership Summer Camp</div><div class="io">University of North Texas</div></div>
                     <div class="item"><div class="iy">2025&ndash;2026</div><div class="it">Instructor, Storytelling with Data Summer Camp</div><div class="io">University of North Texas</div></div>
                     <div class="item"><div class="iy">2025</div><div class="it">Facilitator, TxDOT Summer Transportation Camp</div><div class="io">University of North Texas</div></div>
-                    <div class="item"><div class="iy">2016&ndash;2018</div><div class="it">Founder, Mock Stock Trading project</div><div class="io">Virtual share-market learning for finance students</div></div>
+                    <div class="item"><div class="iy">2017&ndash;2019</div><div class="it">Convener, Mock Stock Trading project</div><div class="io">Virtual share-market learning for finance students</div></div>
                   </div>
                 </div>
               </div>
@@ -583,18 +694,22 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
     <div class="panel" id="sec-teaching">
                 <div class="label-row"><div class="section-label">Teaching Philosophy</div><button class="secx" type="button" data-expand="sec-teaching" aria-label="Expand Teaching Experience" title="Expand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6M15 21h6v-6M3 3l7 7M21 21l-7-7"/></svg></button></div>
                 <p class="bio" style="margin-bottom:1.25rem">My teaching focuses on a practical question: <em>What should students be able to do by the end of the class?</em> I begin with what students already know, explain new concepts in clear language, and give them opportunities to apply those concepts and defend their reasoning. In finance and quantitative courses, I connect theory with real financial data, business problems, and managerial decisions. I want students not only to perform an analysis, but also to interpret the results, evaluate their limitations, and communicate their conclusions clearly.</p>
+                <div class="label-row"><div class="section-label">Teaching Interests</div></div>
+                <div class="tags" style="margin-bottom:1.5rem">
+                  <span class="chip tag">Investments</span><span class="chip tag">Security Analysis &amp; Portfolio Management</span><span class="chip tag">Fixed Income Securities</span><span class="chip tag">Financial Derivatives</span><span class="chip tag">Insurance &amp; Risk Management</span><span class="chip tag">Corporate Finance</span><span class="chip tag">Financial Markets &amp; Institutions</span>
+                </div>
                 <div class="label-row"><div class="section-label">Teaching Experience</div></div>
             <div class="items">
                   <div class="item">
                     <div class="iy">2023&ndash;Present</div>
-                    <div class="it">Teaching Assistant, Information Science</div>
+                    <div class="it">Research &amp; Teaching Assistant, Information Science</div>
                     <div class="io">University of North Texas</div>
                     <p class="id">Supports instruction and assessment across undergraduate and graduate courses with combined enrolments exceeding 200 students. Develops lecture slides, instructional videos, graphics, and assessments; delivers guest lectures on research ethics and data literacy; trains research assistants in data collection, coding, and analysis.</p>
                   </div>
                   <div class="item">
                     <div class="iy">2006&ndash;Present</div>
                     <div class="it">Associate Professor, Business Administration</div>
-                    <div class="io">Daffodil International University &middot; Assistant Professor 2011&ndash;16 &middot; Senior Lecturer 2008&ndash;11 &middot; Lecturer 2006&ndash;08</div>
+                    <div class="io">Daffodil International University &middot; Associate Professor 2017&ndash;Present (on study leave since 2022) &middot; Assistant Professor 2011&ndash;16 &middot; Senior Lecturer 2008&ndash;11 &middot; Lecturer 2006&ndash;08</div>
                     <p class="id">Taught finance, investment, and research methods in person, online, and blended, and designed <strong>13 digital course contents</strong> through the Blended Learning Centre. Supervised <strong>more than 100</strong> master&rsquo;s theses and internship reports. Ran team-based case challenges, the Mock Stock Trading project, and the Finance Exposure fair; used mind mapping, Padlet feedback, and peer assessment to make evaluation part of learning.</p>
                   </div>
                   <div class="item">
@@ -617,14 +732,31 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
                     <span class="chip tag">Corporate Finance</span><span class="chip tag">Principles of Finance</span><span class="chip tag">Public Finance</span><span class="chip tag">Financial Management</span><span class="chip tag">Fundamentals of Investments</span><span class="chip tag">Security Analysis &amp; Portfolio Management</span><span class="chip tag">Fixed Income Securities</span><span class="chip tag">Financial Derivatives &amp; Markets</span><span class="chip tag">Financial Markets &amp; Institutions</span><span class="chip tag">Fundamentals of Banking</span><span class="chip tag">Insurance &amp; Risk Management</span><span class="chip tag">Working Capital Management</span><span class="chip tag">Real Estate Finance</span><span class="chip tag">Financial Analysis &amp; Control</span><span class="chip tag">Financial Statement Analysis</span><span class="chip tag">Research Methods</span><span class="chip tag">Business Statistics</span><span class="chip tag">Basic Mathematics</span>
                   </div>
                 </div>
+                <div class="divider">
+                  <div class="label-row"><div class="section-label">Technical &amp; Analytical Skills</div></div>
+                  <div class="edu-list">
+                    <div class="edu"><div class="dg">Programming &amp; Statistical Software</div><div class="in" style="text-transform:none; letter-spacing:normal">Python, R, Stata, SPSS, SmartPLS</div></div>
+                    <div class="edu"><div class="dg">Financial Databases</div><div class="in" style="text-transform:none; letter-spacing:normal">WRDS, Compustat, CRSP, SEC EDGAR</div></div>
+                    <div class="edu"><div class="dg">Data Collection &amp; Management</div><div class="in" style="text-transform:none; letter-spacing:normal">Web scraping, APIs, data cleaning, data integration</div></div>
+                    <div class="edu"><div class="dg">Data Science &amp; Text Analysis</div><div class="in" style="text-transform:none; letter-spacing:normal">Machine learning, natural language processing, large language models, retrieval-augmented generation</div></div>
+                    <div class="edu"><div class="dg">Empirical Methods</div><div class="in" style="text-transform:none; letter-spacing:normal">Panel-data analysis, fixed-effects models, event-study methods</div></div>
+                    <div class="edu"><div class="dg">Visualization &amp; Research Tools</div><div class="in" style="text-transform:none; letter-spacing:normal">Tableau, ggplot2, Matplotlib, Git, GitHub, LaTeX</div></div>
+                  </div>
+                </div>
                 <div class="divider" id="sec-activities">
                   <div class="label-row"><div class="section-label">Selected Teaching Activities</div><button class="secx" type="button" data-expand="sec-activities" aria-label="Expand Selected Teaching Activities" title="Expand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6M15 21h6v-6M3 3l7 7M21 21l-7-7"/></svg></button></div>
                   <div class="items">
-                    <div class="item"><div class="iy">2016&ndash;2018</div><div class="it">Mock Stock Trading</div><div class="io">Founder &middot; Daffodil International University</div><p class="id">A virtual share-market project in which students applied investment and risk concepts to live market conditions.</p></div>
-                    <div class="item"><div class="iy">2018</div><div class="it">Finance Exposure Project Fair</div><div class="io">Initiator &middot; Daffodil International University</div><p class="id">A student fair at which teams built financial models and explained how they worked.</p></div>
+                    <div class="item"><div class="iy">2017&ndash;2019</div><div class="it">Mock Stock Trading</div><div class="io">Convener &middot; Daffodil International University</div><p class="id">A virtual share-market project in which students applied investment and risk concepts to live market conditions.</p></div>
+                    <div class="item"><div class="iy">2016&ndash;2018</div><div class="it">Finance Exposure Project Fair</div><div class="io">Convener &middot; Daffodil International University</div><p class="id">A student fair at which teams built financial models and explained how they worked.</p></div>
                     <div class="item"><div class="iy">2020&ndash;2021</div><div class="it">Blended Learning Centre course design</div><div class="io">Daffodil International University</div><p class="id">Designed 13 digital course contents and restructured courses for online delivery through the Blended Learning Centre.</p></div>
                     <div class="item"><div class="iy">2025&ndash;2026</div><div class="it">Storytelling with Data &amp; NexGen Data Leadership camps</div><div class="io">Instructor and counselor &middot; University of North Texas</div><p class="id">Summer programs introducing high-school students to data analysis and communication.</p></div>
+                    <div class="item"><div class="iy">2026</div><div class="it">Student Coordinator, Data Science &amp; AI Talk Series</div><div class="io">University of North Texas</div></div>
                     <div class="item"><div class="iy">2006&ndash;2021</div><div class="it">Thesis and internship supervision</div><div class="io">Daffodil International University</div><p class="id">Supervised more than 100 master&rsquo;s theses and undergraduate and graduate internship reports.</p></div>
+                    <div class="item"><div class="iy">2016</div><div class="it">Convener, Business Fest@UC</div><div class="io">Daffodil International University</div></div>
+                    <div class="item"><div class="iy">2014&ndash;2015</div><div class="it">Instructor, Executive Presentation Skill Development (workshop)</div><div class="io">Daffodil International University</div></div>
+                    <div class="item"><div class="iy">2011&ndash;2013</div><div class="it">Instructor, Advanced Trading Affairs Learning of Capital Market (workshop)</div><div class="io">Daffodil International University</div></div>
+                    <div class="item"><div class="iy">2010&ndash;2013</div><div class="it">Instructor, Capital Market ABC and Personal Investment (workshop)</div><div class="io">Daffodil International University</div></div>
+                    <div class="item"><div class="iy">Jul 2020</div><div class="it">Invited Guest, BLC: NOW &amp; NEXT</div><div class="io">Daffodil International University</div></div>
                   </div>
                 </div>
               </div>
@@ -634,6 +766,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
     <div class="panel" id="sec-leadership">
                 <div class="label-row"><div class="section-label">Leadership &amp; Service</div><button class="secx" type="button" data-expand="sec-leadership" aria-label="Expand Leadership and Service" title="Expand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6M15 21h6v-6M3 3l7 7M21 21l-7-7"/></svg></button></div>
                 <div class="items">
+                  <div class="item">
+                    <div class="iy">2021&ndash;Present</div>
+                    <div class="it">Ad Hoc Reviewer</div>
+                    <div class="io">Acta Psychologica, Elsevier (2025) &middot; Journal of Library Resource Sharing, Taylor &amp; Francis (2025) &middot; Journal of Financial Reporting and Accounting, Emerald (2024) &middot; Journal of Information and Knowledge Management, World Scientific (2023) &middot; International Journal of Research and Innovation in Social Science (2021&ndash;2024)</div>
+                  </div>
                   <div class="item">
                     <div class="orgrow">
                       <div>
@@ -653,7 +790,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
                     <div class="iy">2015&ndash;2021</div>
                     <div class="it">Academic Director, Uttara Campus</div>
                     <div class="io">Daffodil International University</div>
-                    <p class="id">Directed academic operations for five programs across three departments &mdash; registration, scheduling, examinations, results, quality monitoring, and faculty performance.</p>
+                    <p class="id">Directed academic operations across four departments &mdash; Business, Computer Science and Engineering, English, and Law &mdash; including registration, scheduling, examinations, results, quality monitoring, and faculty performance.</p>
                   </div>
                   <div class="item">
                     <div class="iy">2019&ndash;2021</div>
@@ -674,6 +811,21 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-of
                     <div class="iy">2010&ndash;2021</div>
                     <div class="it">Member, Curriculum Development Committee</div>
                     <div class="io">Daffodil International University &middot; Academic Council 2015&ndash;2021</div>
+                  </div>
+                  <div class="item">
+                    <div class="iy">2022</div>
+                    <div class="it">Co-Convener and Host, Virtual Postgraduate Research Summit</div>
+                    <div class="io">Daffodil International University</div>
+                  </div>
+                  <div class="item">
+                    <div class="iy">2016&ndash;2022</div>
+                    <div class="it">Member, Complaint Committee to Prevent Sexual Harassment</div>
+                    <div class="io">Daffodil International University</div>
+                  </div>
+                  <div class="item">
+                    <div class="iy">2015</div>
+                    <div class="it">Convener, Examination Committee</div>
+                    <div class="io">Daffodil International University</div>
                   </div>
                 </div>
               </div>
@@ -818,3 +970,5 @@ window.addEventListener("scroll", function(){
   if(window.scrollY < 200){ navlinks.forEach(function(a){ a.classList.toggle("on", a.getAttribute("href") === "#top"); }); }
 }, {passive:true});
 </script>
+</body>
+</html>
