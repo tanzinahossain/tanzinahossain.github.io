@@ -1,0 +1,163 @@
+---
+layout: default
+title: Data Science & Information Science
+description: Developing computational methods to measure semantic change, evaluate claims, and retrieve evidence from large document collections.
+---
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <img class="hero-photo" src="{{ '/portrait.png' | relative_url }}" alt="Tanzina Hossain">
+    <div class="hero-text">
+      <div class="kicker">Data Science &amp; Information Science</div>
+      <h1>Data Science and Information Science Researcher</h1>
+      <p class="lede">Developing computational methods to measure semantic change, evaluate claims, and retrieve evidence from large document collections.</p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href="{{ '/cv/' | relative_url }}">Download Data Science CV</a>
+        <a class="btn btn-primary" href="#dissertation">View Research Pipeline</a>
+        <a class="btn btn-ghost" href="https://github.com/tanzinahossain" target="_blank" rel="noopener">Visit GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Identity</div>
+      <h2>Research identity</h2>
+    </div>
+    <p class="lede">I am a PhD candidate in Information Science with a Data Science concentration. My research uses machine learning, natural language processing, contextual embeddings, large language models, and information retrieval to analyze corporate disclosures and other complex information environments.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Research Areas</div>
+      <h2>Core research areas</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card"><h3>Natural Language Processing</h3><p>Analyzing financial and business text using computational language methods.</p></div>
+      <div class="card"><h3>Information Retrieval &amp; RAG</h3><p>Retrieving the specific evidence that matters from large document collections.</p></div>
+      <div class="card"><h3>Machine Learning &amp; Predictive Modeling</h3><p>Applying predictive methods to finance, ESG, and business outcomes.</p></div>
+      <div class="card"><h3>Computational Financial Text Analysis</h3><p>Measuring meaning, change, and novelty in corporate financial disclosures.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="dissertation">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Dissertation</div>
+      <h2>Dissertation research</h2>
+      <p style="color:var(--text-muted); max-width:42rem">Three studies from my dissertation, <em>Computational Analysis of Corporate Disclosures: Measuring Change, Identifying Novel Information, and Retrieving Evidence from MD&amp;A</em>.</p>
+    </div>
+    <div class="card-grid">
+      <div class="project-card">
+        <h3>Contextual MD&amp;A Change</h3>
+        <dl>
+          <dt>Problem</dt><dd>Develops a semantic measure of year-over-year disclosure change using section alignment, contextual embeddings, chunk matching, and document-level aggregation.</dd>
+          <dt>Dataset</dt><dd>Year-over-year MD&amp;A sections of U.S. corporate filings</dd>
+        </dl>
+        {% assign p = site.data.projects | where: "id", "md-and-a-change" | first %}
+        <span class="status-tag">{{ p.status }}</span>
+      </div>
+
+      <div class="project-card">
+        {% assign p = site.data.projects | where: "id", "peer-adjusted-novelty" | first %}
+        <h3>{{ p.title }}</h3>
+        <dl>
+          <dt>Problem</dt><dd>{{ p.question }}</dd>
+          <dt>Methods</dt><dd>{{ p.methods }}</dd>
+          <dt>Dataset</dt><dd>{{ p.data }}</dd>
+        </dl>
+        <span class="status-tag">{{ p.status }}</span>
+      </div>
+
+      <div class="project-card">
+        {% assign p = site.data.projects | where: "id", "revision-aware-retrieval" | first %}
+        <h3>{{ p.title }}</h3>
+        <dl>
+          <dt>Problem</dt><dd>{{ p.question }}</dd>
+          <dt>Methods</dt><dd>{{ p.methods }}</dd>
+          <dt>Dataset</dt><dd>{{ p.data }}</dd>
+        </dl>
+        <span class="status-tag">{{ p.status }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Methods</div>
+      <h2>Technical methods</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card"><h3>Programming &amp; Analysis</h3><p style="margin:0">Python<br>R<br>Stata<br>SPSS</p></div>
+      <div class="card"><h3>Machine Learning &amp; NLP</h3><p style="margin:0">Predictive modeling<br>Text embeddings<br>Transformer models<br>FinBERT<br>Natural-language inference<br>Large language models</p></div>
+      <div class="card"><h3>Information Systems</h3><p style="margin:0">Dense retrieval<br>Retrieval-augmented generation<br>Evidence retrieval<br>APIs<br>Data collection pipelines<br>Web scraping</p></div>
+      <div class="card"><h3>Evaluation</h3><p style="margin:0">Construct validation<br>Predictive validation<br>Model comparison<br>Human annotation design<br>LLM evaluation</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Publications</div>
+      <h2>Technical publications and projects</h2>
+    </div>
+    <div class="pub-list">
+      {% assign tech_pub_ids = "findebate,finnlp-taskaware,esg-prediction" | split: "," %}
+      {% for id in tech_pub_ids %}
+        {% assign pub = site.data.publications | where: "id", id | first %}
+        {% include pub-item.html pub=pub %}
+      {% endfor %}
+    </div>
+    <div class="card-grid" style="margin-top:1.5rem">
+      {% assign tech_project_ids = "md-and-a-change,revision-aware-retrieval" | split: "," %}
+      {% for id in tech_project_ids %}
+        {% assign p = site.data.projects | where: "id", id | first %}
+        {% include project-card.html p=p %}
+      {% endfor %}
+    </div>
+    <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="{{ '/publications/' | relative_url }}">View All Publications</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Teaching Interests</div>
+      <h2>Teaching interests</h2>
+      <p style="color:var(--text-muted); max-width:40rem">Areas I am prepared to teach based on my research and coursework — distinct from courses I have independently taught (see full teaching record on the homepage).</p>
+    </div>
+    <div class="card">
+      <p style="margin:0">
+        Applied Machine Learning<br>Natural Language Processing<br>Introduction to Data Science<br>Data Visualization<br>Information Retrieval<br>Generative AI Applications<br>Research Methods<br>Data Ethics
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Repositories</div>
+      <h2>Repositories and demonstrations</h2>
+    </div>
+    <p class="lede">A documented showcase of research code will be linked here once repositories are ready for public review. In the meantime, visit my <a href="https://github.com/tanzinahossain" target="_blank" rel="noopener">GitHub profile</a>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Materials</div>
+      <h2>Download materials</h2>
+    </div>
+    <p class="lede">A Data Science &amp; Information Science CV and research statement are being finalized. In the meantime, please <a href="mailto:ematanzina@gmail.com">email me</a> for current copies, or see <a href="{{ '/publications/' | relative_url }}">selected papers</a>.</p>
+  </div>
+</section>
