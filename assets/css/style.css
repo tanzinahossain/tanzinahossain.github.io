@@ -47,10 +47,11 @@ section + section{border-top:1px solid var(--border)}
 .hero{background:var(--gray); padding:4rem 0}
 .hero-grid{display:flex; gap:3rem; align-items:center; flex-wrap:wrap}
 .hero-photo{width:9.5rem; height:9.5rem; border-radius:50%; object-fit:cover; border:3px solid var(--white); box-shadow:0 1px 3px rgba(23,42,58,.15); flex:none}
-.hero-photo-col{display:flex; flex-direction:column; align-items:center; gap:.8rem; flex:none}
-.hero-social{display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem .9rem}
-.hero-social a{font-size:.8rem; font-weight:500; color:var(--blue)}
-.hero-social a:hover{color:var(--teal)}
+.hero-photo-col{display:flex; flex-direction:column; align-items:center; gap:1.4rem; flex:none}
+.hero-social{display:flex; align-items:center; border:1px solid var(--border); border-radius:4px; overflow:hidden; background:var(--white)}
+.hero-social a{display:flex; align-items:center; justify-content:center; padding:.55rem .8rem; font-size:.78rem; font-weight:500; color:var(--blue); border-right:1px solid var(--border)}
+.hero-social a:last-child{border-right:0}
+.hero-social a:hover{background:var(--gray); color:var(--teal); text-decoration:none}
 .hero-text{flex:1 1 22rem; min-width:0}
 .hero-text .kicker{font-family:var(--sans); font-size:.85rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--teal); margin-bottom:.5rem}
 .hero-text h1{margin-bottom:.3rem}
