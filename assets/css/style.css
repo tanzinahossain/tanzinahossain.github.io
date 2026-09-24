@@ -11,7 +11,7 @@
   --text-muted:#4C5C68;
   --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
   --sans:"Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  --maxw:1100px;
+  --maxw:1280px;
 }
 
 *{box-sizing:border-box}
