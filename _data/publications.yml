@@ -7,6 +7,7 @@
   year: 2026
   status: Forthcoming
   type: journal
+  abbr: "IP&M"
   doi:
   tags: [nlp, ml, analytics]
   apa: "Rashid, M., Hong, L., Hossain, T., Wang, N., Hossain, K. S. M. T., Ye, G., &amp; Ryan, S. (2026). Fin-Debate: A multi-agent LLM framework for automated fact-checking in the financial domain. Information Processing &amp; Management."
@@ -26,6 +27,7 @@
   year: 2026
   status: Forthcoming
   type: conference
+  abbr: "FinNLP 26"
   doi:
   tags: [nlp, ml, analytics]
   apa: "Rashid, M., Hossain, T., Song, X., &amp; Hong, L. (2026). Task-aware methods for multilingual financial NLP. Proceedings of the 11th Workshop on Financial Technology and Natural Language Processing (FinNLP 2026), Association for Computational Linguistics."
@@ -45,6 +47,7 @@
   year: 2026
   status: Published
   type: journal
+  abbr: "JCAF"
   doi: "10.1002/jcaf.70052"
   tags: [esg, ml, finance, analytics]
   apa: "Hossain, T., Malik, M., Hossain, K. S. M. T., &amp; Ryan, S. (2026). Are industry sectors critical for ESG score prediction? Evidence from the U.S. manufacturing and service sectors using machine learning methods. Journal of Corporate Accounting &amp; Finance. https://doi.org/10.1002/jcaf.70052"
@@ -64,6 +67,7 @@
   year: 2025
   status: Published
   type: journal
+  abbr: "Vision"
   doi: "10.1177/09722629251352696"
   tags: [fintech, finance, analytics]
   apa: "Mahmud, I., Hossain, T., Mahmud, A., Akter, R., Rahman, S., &amp; Begum, A. (2025). Predicting FinTech adoption: Evidence from an emerging market. Vision: The Journal of Business Perspective. https://doi.org/10.1177/09722629251352696"
@@ -83,6 +87,7 @@
   year: 2025
   status: Published
   type: journal
+  abbr: "JFRA"
   doi: "10.1108/JFRA-04-2022-0125"
   tags: [finance, accounting]
   apa: "Mia, M. A., Hossain, T., Nesa, Z., Saifullah, M. K., Akter, R., &amp; Hossain, M. I. (2025). The impact of board gender diversity on the financing costs of microfinance institutions: Global evidence. Journal of Financial Reporting and Accounting, 23(3), 876–901. https://doi.org/10.1108/JFRA-04-2022-0125"
@@ -102,6 +107,7 @@
   year: 2024
   status: Published
   type: journal
+  abbr: "PSU RR"
   doi: "10.1108/PRR-10-2021-0054"
   tags: [finance]
   apa: "Hossain, T., &amp; Siddiqua, P. (2024). Exploring the influence of behavioral aspects on stock investment decision-making: A study on Bangladeshi individual investors. PSU Research Review, 8(2), 467–483. https://doi.org/10.1108/PRR-10-2021-0054"
@@ -121,6 +127,7 @@
   year: 2023
   status: Published
   type: journal
+  abbr: "IJSR"
   doi: "10.30997/ijsr.v5i1.244"
   tags: [finance]
   apa: "Muzareba, A. M., Hossain, T., &amp; Nesa, Z. (2023). Insights on investment psychology of individual investors at Dhaka Stock Exchange during the COVID-19 pandemic. Indonesian Journal of Social Research, 5(1), 79–90. https://doi.org/10.30997/ijsr.v5i1.244"
@@ -140,6 +147,7 @@
   year: 2021
   status: Published
   type: journal
+  abbr: "AEJ"
   doi:
   tags: [finance]
   apa: "Shahriar, M. S., Hasan, K. B. M. R., Hossain, T., Beg, T. H., Islam, K. M. A., &amp; Zayed, N. M. (2021). Financial decision making and forecasting techniques on project evaluation: A planning, development and entrepreneurial perspective. Academy of Entrepreneurship Journal, 27(4), 1–7."
@@ -158,6 +166,7 @@
   year: 2011
   status: Published
   type: journal
+  abbr: "JFB"
   doi:
   tags: [finance]
   apa: "Hossain, T., &amp; Nesa, Z. (2011). Performance evaluation of mutual funds in Bangladesh. Journal of Finance and Banking, 9(1), 157–176."
@@ -176,6 +185,7 @@
   year: 2010
   status: Published
   type: journal
+  abbr: "JBFS"
   doi:
   tags: [finance]
   apa: "Hossain, T. (2010). Islamic credit card: A prospective in Islamic banking in Bangladesh. Journal of Banking &amp; Financial Services, 4(1–2)."
@@ -194,6 +204,7 @@
   year: 2008
   status: Published
   type: journal
+  abbr: "DIU JBE"
   doi:
   tags: [finance]
   apa: "Hossain, T. (2008). Does categorization influence price behavior of shares? A study on Dhaka Stock Exchange. DIU Journal of Business and Economics, 3(1)."
@@ -212,6 +223,7 @@
   year: 2012
   status: Book
   type: book
+  abbr: "Book"
   doi:
   tags: [finance]
   apa: "Hossain, T. (2012). Remittance issues &amp; practices: A Bangladesh perspective. LAP LAMBERT Academic Publishing GmbH &amp; Co. KG, Germany."

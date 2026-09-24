@@ -35,7 +35,7 @@ description: Full publication record — journal articles, forthcoming work, and
 <script>
 (function(){
   var btns = document.querySelectorAll(".pub-filter-btn");
-  var items = document.querySelectorAll(".pub-item");
+  var items = document.querySelectorAll(".pub-card");
   var years = document.querySelectorAll(".pub-year");
   function applyFilter(f){
     items.forEach(function(el){
@@ -43,7 +43,7 @@ description: Full publication record — journal articles, forthcoming work, and
     });
     years.forEach(function(y){
       var list = y.nextElementSibling;
-      var anyVisible = list && Array.prototype.some.call(list.querySelectorAll(".pub-item"), function(el){ return !el.hidden; });
+      var anyVisible = list && Array.prototype.some.call(list.querySelectorAll(".pub-card"), function(el){ return !el.hidden; });
       y.hidden = !anyVisible;
       if(list) list.hidden = !anyVisible;
     });

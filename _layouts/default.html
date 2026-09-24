@@ -28,7 +28,7 @@ document.addEventListener("click", function(e){
   b.textContent = show ? "Hide" : "Cite";
 });
 
-/* copy citation text */
+/* copy citation text (legacy single-block copy, still used elsewhere) */
 document.addEventListener("click", function(e){
   var b = e.target.closest("[data-copy]");
   if(!b) return;
@@ -36,6 +36,32 @@ document.addEventListener("click", function(e){
   if(!el) return;
   var done = function(msg){ var o = b.textContent; b.textContent = msg; setTimeout(function(){ b.textContent = o; }, 1600); };
   if(navigator.clipboard){ navigator.clipboard.writeText(el.textContent).then(function(){ done("Copied"); }, function(){ done("Select & copy"); }); }
+  else { done("Select & copy"); }
+});
+
+/* cite tab switching (APA / BibTeX) */
+document.addEventListener("click", function(e){
+  var b = e.target.closest("[data-cite-tab]");
+  if(!b) return;
+  var group = b.closest(".cite-tabs");
+  var content = group.nextElementSibling;
+  Array.prototype.forEach.call(group.querySelectorAll(".cite-tab"), function(t){ t.classList.remove("active"); });
+  b.classList.add("active");
+  Array.prototype.forEach.call(content.querySelectorAll(".cite-format"), function(p){ p.hidden = true; });
+  var target = document.getElementById(b.getAttribute("data-cite-tab"));
+  if(target) target.hidden = false;
+});
+
+/* copy whichever cite format tab is currently visible */
+document.addEventListener("click", function(e){
+  var b = e.target.closest("[data-copy-active]");
+  if(!b) return;
+  var box = document.getElementById(b.getAttribute("data-copy-active"));
+  if(!box) return;
+  var visible = box.querySelector(".cite-format:not([hidden])");
+  if(!visible) return;
+  var done = function(msg){ var o = b.textContent; b.textContent = msg; setTimeout(function(){ b.textContent = o; }, 1600); };
+  if(navigator.clipboard){ navigator.clipboard.writeText(visible.textContent).then(function(){ done("Copied"); }, function(){ done("Select & copy"); }); }
   else { done("Select & copy"); }
 });
 </script>

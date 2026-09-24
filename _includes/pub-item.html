@@ -1,24 +1,33 @@
 {% comment %}
-  Renders one publication list row with a Cite toggle (APA + BibTeX, each
-  with a Copy button), matching the old design. Usage:
-  {% include pub-item.html pub=item %}
+  Renders one publication as a card: title + venue badge, authors, italic
+  venue line, DOI + Cite buttons, and a tabbed APA/BibTeX citation panel
+  with one Copy button. Usage: {% include pub-item.html pub=item %}
 {% endcomment %}
-<div class="pub-item" data-type="{{ include.pub.type }}">
-  <div class="pt">{{ include.pub.title }}</div>
-  <div class="pa">{{ include.pub.authors }}</div>
-  <div class="pv">{{ include.pub.venue }}{% if include.pub.year %} · {{ include.pub.year }}{% endif %}{% if include.pub.status == "Forthcoming" %} · Forthcoming{% endif %}</div>
-  <div class="chips">
-    {% if include.pub.doi %}<a class="chip" href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
-    <button class="chip" type="button" data-cite-toggle="cite-{{ include.pub.id }}">Cite</button>
+{% assign pid = include.pub.id %}
+<div class="pub-card" data-type="{{ include.pub.type }}">
+  <div class="pub-card-title">
+    <span class="pt">{{ include.pub.title }}</span>
+    {% if include.pub.abbr %}<span class="badge">{{ include.pub.abbr }}</span>{% endif %}
   </div>
-  <div class="citebox" id="cite-{{ include.pub.id }}" hidden>
-    <div class="citeblock">
-      <div class="citehead"><span>APA</span><button class="chip" type="button" data-copy="apa-{{ include.pub.id }}">Copy</button></div>
-      <pre id="apa-{{ include.pub.id }}">{{ include.pub.apa }}</pre>
+  <div class="pa">{{ include.pub.authors }}</div>
+  <div class="pv">{{ include.pub.venue }}{% if include.pub.status == "Forthcoming" %} · Forthcoming{% endif %}</div>
+
+  <div class="chips">
+    {% if include.pub.doi %}<a class="chip-outline" href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+    <button class="chip-solid" type="button" data-cite-toggle="cite-{{ pid }}">Cite</button>
+  </div>
+
+  <div class="citebox" id="cite-{{ pid }}" hidden>
+    <div class="cite-tabs">
+      <div class="cite-tab-group">
+        <button class="cite-tab active" type="button" data-cite-tab="apa-{{ pid }}">APA</button>
+        <button class="cite-tab" type="button" data-cite-tab="bib-{{ pid }}">BibTeX</button>
+      </div>
+      <button class="cite-copy" type="button" data-copy-active="cite-{{ pid }}">Copy</button>
     </div>
-    <div class="citeblock">
-      <div class="citehead"><span>BibTeX</span><button class="chip" type="button" data-copy="bib-{{ include.pub.id }}">Copy</button></div>
-      <pre id="bib-{{ include.pub.id }}">{{ include.pub.bibtex }}</pre>
+    <div class="cite-content">
+      <pre id="apa-{{ pid }}" class="cite-format">{{ include.pub.apa }}</pre>
+      <pre id="bib-{{ pid }}" class="cite-format" hidden>{{ include.pub.bibtex }}</pre>
     </div>
   </div>
 </div>
