@@ -110,7 +110,8 @@ h1{margin-bottom:.3rem}
 .pub-filter-btn:hover{border-color:var(--teal); color:var(--teal)}
 .pub-filter-btn.active{background:var(--navy); border-color:var(--navy); color:var(--white)}
 .pub-filter-btn.active span{color:#C9D3D9}
-.pub-year{color:var(--navy); font-size:1.15rem; margin-bottom:1rem}
+.pub-year{font-family:var(--sans); color:var(--text-muted); font-size:.95rem; font-weight:600; margin-bottom:1.2rem; display:flex; align-items:center; gap:1rem}
+.pub-year::after{content:""; flex:1; height:1px; background:var(--border)}
 .pub-list{display:flex; flex-direction:column}
 .pub-item{border-bottom:1px solid var(--border); padding-bottom:1.1rem}
 .pub-item:last-child{border-bottom:0; padding-bottom:0}
@@ -123,7 +124,8 @@ h1{margin-bottom:.3rem}
 /* ===== Publication entries: flat, two-column per year ===== */
 .pub-grid{display:grid; grid-template-columns:1fr 1fr; gap:2.5rem 3rem; margin-bottom:2.5rem}
 @media (max-width:700px){.pub-grid{grid-template-columns:1fr}}
-.pub-entry{min-width:0}
+.pub-entry{min-width:0; padding:1rem; margin:-1rem; border-radius:8px; transition:background .2s}
+.pub-entry:hover{background:rgba(44,122,123,.07)}
 .pub-card-title{margin-bottom:.5rem}
 .pub-entry .pt{font-size:1.05rem; font-weight:700; color:var(--navy)}
 .pub-entry .badge{display:inline-block; margin-left:.5rem; font-size:.68rem; font-weight:700; color:var(--teal); border:1px solid var(--teal); border-radius:4px; padding:.05rem .5rem; vertical-align:middle; white-space:nowrap}
