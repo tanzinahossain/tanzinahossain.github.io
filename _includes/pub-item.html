@@ -1,20 +1,26 @@
 {% comment %}
-  Renders one publication as a card: title + venue badge, authors, italic
-  venue line, DOI + Cite buttons, and a tabbed APA/BibTeX citation panel
-  with one Copy button. Usage: {% include pub-item.html pub=item %}
+  Renders one publication, flat (no card box): title + venue badge, authors,
+  italic venue line, DOI + Cite buttons, and a tabbed APA/BibTeX citation
+  panel with one Copy button. Usage: {% include pub-item.html pub=item %}
 {% endcomment %}
 {% assign pid = include.pub.id %}
-<div class="pub-card" data-type="{{ include.pub.type }}">
+<div class="pub-entry" data-type="{{ include.pub.type }}">
   <div class="pub-card-title">
     <span class="pt">{{ include.pub.title }}</span>
     {% if include.pub.abbr %}<span class="badge">{{ include.pub.abbr }}</span>{% endif %}
   </div>
   <div class="pa">{{ include.pub.authors }}</div>
-  <div class="pv">{{ include.pub.venue }}{% if include.pub.status == "Forthcoming" %} · Forthcoming{% endif %}</div>
+  <div class="pv"><span class="pv-icon">@</span> {{ include.pub.venue }}{% if include.pub.status == "Forthcoming" %} · Forthcoming{% endif %}</div>
 
   <div class="chips">
-    {% if include.pub.doi %}<a class="chip-outline" href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
-    <button class="chip-solid" type="button" data-cite-toggle="cite-{{ pid }}">Cite</button>
+    {% if include.pub.doi %}<a class="chip-outline" href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" width="14" height="14"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+      DOI
+    </a>{% endif %}
+    <button class="chip-solid" type="button" data-cite-toggle="cite-{{ pid }}">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="12" height="12"><path d="M4.6 15.2c0-3.2 1.7-5.6 5-7.2l1 1.6c-2.2 1.2-3.3 2.5-3.4 4 .3-.1.6-.2 1-.2 1.4 0 2.4 1 2.4 2.4 0 1.5-1.1 2.6-2.6 2.6-1.9 0-3.4-1.3-3.4-3.2zm9 0c0-3.2 1.7-5.6 5-7.2l1 1.6c-2.2 1.2-3.3 2.5-3.4 4 .3-.1.6-.2 1-.2 1.4 0 2.4 1 2.4 2.4 0 1.5-1.1 2.6-2.6 2.6-1.9 0-3.4-1.3-3.4-3.2z"/></svg>
+      Cite
+    </button>
   </div>
 
   <div class="citebox" id="cite-{{ pid }}" hidden>

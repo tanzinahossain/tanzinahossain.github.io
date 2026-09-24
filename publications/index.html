@@ -5,9 +5,8 @@ description: Full publication record — journal articles, forthcoming work, and
 ---
 <section>
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Publications</div>
-    </div>
+    <h1 style="font-size:2.6rem">PUBLICATIONS</h1>
+    <p class="lede" style="max-width:44rem">I study corporate disclosures, financial decision-making, and business information using econometrics, machine learning, and natural language processing.</p>
 
     {% assign all = site.data.publications %}
     {% assign journal_count = all | where: "type", "journal" | size %}
@@ -25,7 +24,7 @@ description: Full publication record — journal articles, forthcoming work, and
     {% for y in years %}
       {% assign year_pubs = sorted | where: "year", y %}
       <h3 class="pub-year">{{ y }}</h3>
-      <div class="pub-list" style="margin-bottom:2.5rem">
+      <div class="pub-grid">
         {% for pub in year_pubs %}{% include pub-item.html pub=pub %}{% endfor %}
       </div>
     {% endfor %}
@@ -35,17 +34,17 @@ description: Full publication record — journal articles, forthcoming work, and
 <script>
 (function(){
   var btns = document.querySelectorAll(".pub-filter-btn");
-  var items = document.querySelectorAll(".pub-card");
+  var items = document.querySelectorAll(".pub-entry");
   var years = document.querySelectorAll(".pub-year");
   function applyFilter(f){
     items.forEach(function(el){
       el.hidden = (f !== "all" && el.getAttribute("data-type") !== f);
     });
     years.forEach(function(y){
-      var list = y.nextElementSibling;
-      var anyVisible = list && Array.prototype.some.call(list.querySelectorAll(".pub-card"), function(el){ return !el.hidden; });
+      var grid = y.nextElementSibling;
+      var anyVisible = grid && Array.prototype.some.call(grid.querySelectorAll(".pub-entry"), function(el){ return !el.hidden; });
       y.hidden = !anyVisible;
-      if(list) list.hidden = !anyVisible;
+      if(grid) grid.hidden = !anyVisible;
     });
   }
   btns.forEach(function(b){

@@ -120,14 +120,17 @@ h1{margin-bottom:.3rem}
 .plinks{margin-top:.4rem; font-size:.82rem}
 .plinks a{margin-right:1rem}
 
-/* ===== Publication cards ===== */
-.pub-card{border:1px solid var(--border); background:rgba(44,122,123,.04); border-radius:8px; padding:1.4rem 1.5rem; margin-bottom:1.3rem}
+/* ===== Publication entries: flat, two-column per year ===== */
+.pub-grid{display:grid; grid-template-columns:1fr 1fr; gap:2.5rem 3rem; margin-bottom:2.5rem}
+@media (max-width:700px){.pub-grid{grid-template-columns:1fr}}
+.pub-entry{min-width:0}
 .pub-card-title{margin-bottom:.5rem}
-.pub-card .pt{font-size:1.05rem; font-weight:700; color:var(--navy)}
-.pub-card .badge{display:inline-block; margin-left:.5rem; font-size:.68rem; font-weight:700; color:var(--teal); border:1px solid var(--teal); border-radius:4px; padding:.05rem .5rem; vertical-align:middle; white-space:nowrap}
-.pub-card .pa{color:var(--navy); font-size:.9rem}
-.pub-card .pa strong{color:var(--teal)}
-.pub-card .pv{margin-top:.25rem; font-style:italic; color:var(--text-muted); font-size:.85rem}
+.pub-entry .pt{font-size:1.05rem; font-weight:700; color:var(--navy)}
+.pub-entry .badge{display:inline-block; margin-left:.5rem; font-size:.68rem; font-weight:700; color:var(--teal); border:1px solid var(--teal); border-radius:4px; padding:.05rem .5rem; vertical-align:middle; white-space:nowrap}
+.pub-entry .pa{color:var(--navy); font-size:.9rem}
+.pub-entry .pa strong{color:var(--teal)}
+.pub-entry .pv{margin-top:.35rem; font-style:italic; color:var(--text-muted); font-size:.85rem}
+.pub-entry .pv-icon{font-style:normal; color:var(--teal)}
 
 /* ===== Citation chips and expandable Cite box ===== */
 .chips{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem}
@@ -141,14 +144,15 @@ h1{margin-bottom:.3rem}
 .chip-solid{background:var(--navy); color:var(--white); border-color:var(--navy)}
 .chip-solid:hover{background:var(--blue); border-color:var(--blue)}
 
-.citebox{margin-top:1rem; border:1px solid var(--border); background:var(--white); border-radius:6px; padding:1rem}
-.cite-tabs{display:flex; align-items:center; justify-content:space-between; gap:.75rem; margin-bottom:.8rem}
+.citebox{margin-top:1rem; border:1px solid var(--border); border-radius:6px; overflow:hidden}
+.cite-tabs{display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.6rem .8rem; border-bottom:1px solid var(--border)}
 .cite-tab-group{display:flex; gap:.5rem}
 .cite-tab{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1px solid var(--border); background:var(--white); color:var(--text-muted); border-radius:4px; padding:.3rem .8rem; cursor:pointer}
 .cite-tab.active{background:var(--navy); border-color:var(--navy); color:var(--white)}
 .cite-copy{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1px solid var(--border); background:var(--white); color:var(--navy); border-radius:4px; padding:.3rem .8rem; cursor:pointer}
 .cite-copy:hover{border-color:var(--teal); color:var(--teal)}
-.cite-content pre{margin:0; font-family:monospace; font-size:.78rem; line-height:1.6; white-space:pre-wrap; word-break:break-word; color:var(--text-muted); background:var(--gray); padding:.8rem; border-radius:4px}
+.cite-content{background:rgba(44,122,123,.06); padding:.9rem}
+.cite-content pre{margin:0; font-family:monospace; font-size:.78rem; line-height:1.6; white-space:pre-wrap; word-break:break-word; color:var(--text-muted)}
 [hidden]{display:none !important}
 
 /* ===== Footer ===== */
