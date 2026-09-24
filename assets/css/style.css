@@ -61,14 +61,14 @@ h1{margin-bottom:.3rem}
 .lede{font-size:1.05rem; color:var(--text-muted); max-width:42rem}
 .hero-actions{display:flex; gap:.9rem; flex-wrap:wrap; margin-top:1.5rem}
 
-/* ===== Homepage: single narrow centered column, like a personal academic page ===== */
-.narrow-col{max-width:36rem; margin:0 auto}
-.narrow-col .hero-photo{margin:0 auto 1.1rem; display:block}
-.narrow-col h1{text-align:center}
-.narrow-col .role{text-align:center; max-width:100%; font-size:1.02rem}
-.narrow-col .hero-social{justify-content:center; margin:1.2rem auto 2rem; width:max-content}
+/* ===== Homepage: two-column, photo+icons left, bio/counts/areas right ===== */
+.profile-grid{display:grid; grid-template-columns:auto 1fr; gap:3rem; align-items:start}
+.photo-col{display:flex; flex-direction:column; align-items:center; gap:1.4rem; flex:none}
+.bio-col{min-width:0}
 .plain-list{list-style:none; margin:0 0 1.5rem; padding:0; display:flex; flex-direction:column; gap:.6rem}
 .plain-list li{font-size:.98rem; color:var(--navy)}
+.areas-row{display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem}
+@media (max-width:800px){.profile-grid{grid-template-columns:1fr; justify-items:center; text-align:center} .bio-col{text-align:left} .areas-row{grid-template-columns:1fr}}
 
 /* ===== Stat tiles ===== */
 .stats{display:grid; grid-template-columns:repeat(4, minmax(6rem,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:2rem; max-width:32rem}
