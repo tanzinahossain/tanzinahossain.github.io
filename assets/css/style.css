@@ -113,7 +113,7 @@ h1{margin-bottom:.3rem}
 .pub-filter-btn.active{background:var(--maroon); color:var(--white)}
 .pub-filter-btn.active span{color:var(--white); opacity:.8}
 .pub-year{font-family:var(--sans); color:var(--text-muted); font-size:.95rem; font-weight:600; margin-bottom:1.2rem; display:flex; align-items:center; gap:1rem}
-.pub-year::after{content:""; flex:1; height:1px; background:var(--border)}
+.pub-year::after{content:""; flex:1; height:1px; background:var(--maroon); opacity:.35}
 .pub-list{display:flex; flex-direction:column}
 .pub-item{border-bottom:1px solid var(--border); padding-bottom:1.1rem}
 .pub-item:last-child{border-bottom:0; padding-bottom:0}
