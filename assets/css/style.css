@@ -3,6 +3,7 @@
   --navy:#172A3A;
   --blue:#356A8A;
   --teal:#2C7A7B;
+  --maroon:#8B1E2E;
   --gray:#F5F7F8;
   --white:#FFFFFF;
   --border:#E1E6E9;
@@ -125,14 +126,14 @@ h1{margin-bottom:.3rem}
 .pub-grid{display:grid; grid-template-columns:1fr 1fr; gap:2.5rem 3rem; margin-bottom:2.5rem}
 @media (max-width:700px){.pub-grid{grid-template-columns:1fr}}
 .pub-entry{min-width:0; padding:1rem; margin:-1rem; border-radius:8px; transition:background .2s}
-.pub-entry:hover{background:rgba(44,122,123,.07)}
+.pub-entry:hover{background:rgba(139,30,46,.07)}
 .pub-card-title{margin-bottom:.5rem}
 .pub-entry .pt{font-size:1.05rem; font-weight:700; color:var(--navy)}
-.pub-entry .badge{display:inline-block; margin-left:.5rem; font-size:.68rem; font-weight:700; color:var(--teal); border:1px solid var(--teal); border-radius:4px; padding:.05rem .5rem; vertical-align:middle; white-space:nowrap}
+.pub-entry .badge{display:inline-block; margin-left:.5rem; font-size:.68rem; font-weight:700; color:var(--maroon); border:1px solid var(--maroon); border-radius:4px; padding:.05rem .5rem; vertical-align:middle; white-space:nowrap}
 .pub-entry .pa{color:var(--navy); font-size:.9rem}
-.pub-entry .pa strong{color:var(--teal)}
+.pub-entry .pa strong{color:var(--maroon)}
 .pub-entry .pv{margin-top:.35rem; font-style:italic; color:var(--text-muted); font-size:.85rem}
-.pub-entry .pv-icon{font-style:normal; color:var(--teal)}
+.pub-entry .pv-icon{font-style:normal; color:var(--maroon)}
 
 /* ===== Citation chips and expandable Cite box ===== */
 .chips{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem}
@@ -143,17 +144,17 @@ h1{margin-bottom:.3rem}
 }
 .chip-outline{background:var(--white); color:var(--navy); border-color:var(--border)}
 .chip-outline:hover{border-color:var(--navy); text-decoration:none}
-.chip-solid{background:var(--navy); color:var(--white); border-color:var(--navy)}
-.chip-solid:hover{background:var(--blue); border-color:var(--blue)}
+.chip-solid{background:var(--maroon); color:var(--white); border-color:var(--maroon)}
+.chip-solid:hover{background:#6E1723; border-color:#6E1723}
 
 .citebox{margin-top:1rem; border:1px solid var(--border); border-radius:6px; overflow:hidden}
 .cite-tabs{display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.6rem .8rem; border-bottom:1px solid var(--border)}
 .cite-tab-group{display:flex; gap:.5rem}
 .cite-tab{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1px solid var(--border); background:var(--white); color:var(--text-muted); border-radius:4px; padding:.3rem .8rem; cursor:pointer}
-.cite-tab.active{background:var(--navy); border-color:var(--navy); color:var(--white)}
+.cite-tab.active{background:var(--maroon); border-color:var(--maroon); color:var(--white)}
 .cite-copy{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1px solid var(--border); background:var(--white); color:var(--navy); border-radius:4px; padding:.3rem .8rem; cursor:pointer}
 .cite-copy:hover{border-color:var(--teal); color:var(--teal)}
-.cite-content{background:rgba(44,122,123,.06); padding:.9rem}
+.cite-content{background:rgba(139,30,46,.06); padding:.9rem}
 .cite-content pre{margin:0; font-family:monospace; font-size:.78rem; line-height:1.6; white-space:pre-wrap; word-break:break-word; color:var(--text-muted)}
 [hidden]{display:none !important}
 
