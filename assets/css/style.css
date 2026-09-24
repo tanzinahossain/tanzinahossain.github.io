@@ -106,11 +106,12 @@ h1{margin-bottom:.3rem}
 .status-tag{display:inline-block; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--blue); background:rgba(53,106,138,.08); border:1px solid rgba(53,106,138,.25); border-radius:3px; padding:.15rem .55rem; margin-top:.3rem}
 
 .pub-filters{display:flex; flex-wrap:wrap; gap:.6rem; margin-bottom:2rem}
-.pub-filter-btn{font-family:var(--sans); font-size:.85rem; font-weight:600; color:var(--text-muted); background:var(--white); border:1.5px solid var(--border); border-radius:4px; padding:.45rem .9rem; cursor:pointer; transition:border-color .15s, color .15s}
-.pub-filter-btn span{font-weight:400; color:var(--text-muted); margin-left:.3rem}
-.pub-filter-btn:hover{border-color:var(--teal); color:var(--teal)}
-.pub-filter-btn.active{background:var(--white); border-color:var(--teal); color:var(--teal)}
-.pub-filter-btn.active span{color:var(--teal); opacity:.7}
+.pub-filter-btn{font-family:var(--sans); font-size:.85rem; font-weight:600; color:var(--maroon); background:var(--white); border:1.5px solid var(--maroon); border-radius:4px; padding:.45rem .9rem; cursor:pointer; transition:background .15s, color .15s}
+.pub-filter-btn span{font-weight:400; color:var(--maroon); opacity:.7; margin-left:.3rem}
+.pub-filter-btn:hover{background:var(--maroon); color:var(--white)}
+.pub-filter-btn:hover span{color:var(--white); opacity:.8}
+.pub-filter-btn.active{background:var(--maroon); color:var(--white)}
+.pub-filter-btn.active span{color:var(--white); opacity:.8}
 .pub-year{font-family:var(--sans); color:var(--text-muted); font-size:.95rem; font-weight:600; margin-bottom:1.2rem; display:flex; align-items:center; gap:1rem}
 .pub-year::after{content:""; flex:1; height:1px; background:var(--border)}
 .pub-list{display:flex; flex-direction:column}
@@ -142,18 +143,17 @@ h1{margin-bottom:.3rem}
   padding:.4rem .9rem; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:.4rem;
   border-radius:5px; border:1.5px solid; background:var(--white); transition:border-color .15s, color .15s;
 }
-.chip-outline{color:var(--navy); border-color:var(--border)}
-.chip-outline:hover{border-color:var(--maroon); color:var(--maroon); text-decoration:none}
-.chip-solid{color:var(--maroon); border-color:var(--maroon)}
-.chip-solid:hover{background:rgba(139,30,46,.06)}
+.chip-outline, .chip-solid{color:var(--maroon); border-color:var(--maroon)}
+.chip-outline:hover, .chip-solid:hover{background:var(--maroon); color:var(--white); text-decoration:none}
 
 .citebox{margin-top:1rem; border:1.5px solid var(--border); border-radius:6px; overflow:hidden}
 .cite-tabs{display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.6rem .8rem; border-bottom:1px solid var(--border)}
 .cite-tab-group{display:flex; gap:.5rem}
-.cite-tab{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1.5px solid var(--border); background:var(--white); color:var(--text-muted); border-radius:4px; padding:.3rem .8rem; cursor:pointer; transition:border-color .15s, color .15s}
-.cite-tab.active{background:var(--white); border-color:var(--maroon); color:var(--maroon)}
-.cite-copy{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1.5px solid var(--border); background:var(--white); color:var(--navy); border-radius:4px; padding:.3rem .8rem; cursor:pointer; transition:border-color .15s, color .15s}
-.cite-copy:hover{border-color:var(--maroon); color:var(--maroon)}
+.cite-tab{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1.5px solid var(--maroon); background:var(--white); color:var(--maroon); border-radius:4px; padding:.3rem .8rem; cursor:pointer; transition:background .15s}
+.cite-tab:hover{background:var(--maroon); color:var(--white)}
+.cite-tab.active{background:var(--maroon); border-color:var(--maroon); color:var(--white)}
+.cite-copy{font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1.5px solid var(--maroon); background:var(--white); color:var(--maroon); border-radius:4px; padding:.3rem .8rem; cursor:pointer; transition:background .15s}
+.cite-copy:hover{background:var(--maroon); color:var(--white)}
 .cite-content{background:rgba(139,30,46,.06); padding:.9rem}
 .cite-content pre{margin:0; font-family:monospace; font-size:.78rem; line-height:1.6; white-space:pre-wrap; word-break:break-word; color:var(--text-muted)}
 [hidden]{display:none !important}
