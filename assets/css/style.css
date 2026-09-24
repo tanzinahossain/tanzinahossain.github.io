@@ -104,6 +104,13 @@ h1{margin-bottom:.3rem}
 .project-card dd{margin:0 0 .6rem; font-size:.9rem; color:var(--text-muted)}
 .status-tag{display:inline-block; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--blue); background:rgba(53,106,138,.08); border:1px solid rgba(53,106,138,.25); border-radius:3px; padding:.15rem .55rem; margin-top:.3rem}
 
+.pub-filters{display:flex; flex-wrap:wrap; gap:.6rem; margin-bottom:2rem}
+.pub-filter-btn{font-family:var(--sans); font-size:.85rem; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); border-radius:4px; padding:.45rem .9rem; cursor:pointer}
+.pub-filter-btn span{font-weight:400; color:var(--text-muted); margin-left:.3rem}
+.pub-filter-btn:hover{border-color:var(--teal); color:var(--teal)}
+.pub-filter-btn.active{background:var(--navy); border-color:var(--navy); color:var(--white)}
+.pub-filter-btn.active span{color:#C9D3D9}
+.pub-year{color:var(--navy); font-size:1.15rem; margin-bottom:1rem}
 .pub-list{display:flex; flex-direction:column; gap:1.1rem}
 .pub-item{border-bottom:1px solid var(--border); padding-bottom:1.1rem}
 .pub-item:last-child{border-bottom:0; padding-bottom:0}

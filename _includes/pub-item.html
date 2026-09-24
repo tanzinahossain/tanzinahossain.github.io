@@ -3,7 +3,7 @@
   with a Copy button), matching the old design. Usage:
   {% include pub-item.html pub=item %}
 {% endcomment %}
-<div class="pub-item">
+<div class="pub-item" data-type="{{ include.pub.type }}">
   <div class="pt">{{ include.pub.title }}</div>
   <div class="pa">{{ include.pub.authors }}</div>
   <div class="pv">{{ include.pub.venue }}{% if include.pub.year %} · {{ include.pub.year }}{% endif %}{% if include.pub.status == "Forthcoming" %} · Forthcoming{% endif %}</div>

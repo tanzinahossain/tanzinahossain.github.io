@@ -9,23 +9,51 @@ description: Full publication record — journal articles, forthcoming work, and
       <div class="eyebrow">Publications</div>
     </div>
 
-    <h3>Forthcoming</h3>
-    <div class="pub-list" style="margin-bottom:2.5rem">
-      {% assign forthcoming = site.data.publications | where: "status", "Forthcoming" %}
-      {% for pub in forthcoming %}{% include pub-item.html pub=pub %}{% endfor %}
+    {% assign all = site.data.publications %}
+    {% assign journal_count = all | where: "type", "journal" | size %}
+    {% assign conference_count = all | where: "type", "conference" | size %}
+    {% assign book_count = all | where: "type", "book" | size %}
+    <div class="pub-filters">
+      <button class="pub-filter-btn active" type="button" data-filter="all">All <span>{{ all.size }}</span></button>
+      <button class="pub-filter-btn" type="button" data-filter="journal">Journal <span>{{ journal_count }}</span></button>
+      <button class="pub-filter-btn" type="button" data-filter="conference">Conference <span>{{ conference_count }}</span></button>
+      <button class="pub-filter-btn" type="button" data-filter="book">Book <span>{{ book_count }}</span></button>
     </div>
 
-    <h3>Peer-Reviewed Journal Articles</h3>
-    <div class="pub-list" style="margin-bottom:2.5rem">
-      {% assign published = site.data.publications | where: "status", "Published" %}
-      {% assign published = published | sort: "year" | reverse %}
-      {% for pub in published %}{% include pub-item.html pub=pub %}{% endfor %}
-    </div>
-
-    <h3>Book</h3>
-    <div class="pub-list">
-      {% assign book = site.data.publications | where: "status", "Book" %}
-      {% for pub in book %}{% include pub-item.html pub=pub %}{% endfor %}
-    </div>
+    {% assign sorted = all | sort: "year" | reverse %}
+    {% assign years = sorted | map: "year" | uniq %}
+    {% for y in years %}
+      {% assign year_pubs = sorted | where: "year", y %}
+      <h3 class="pub-year">{{ y }}</h3>
+      <div class="pub-list" style="margin-bottom:2.5rem">
+        {% for pub in year_pubs %}{% include pub-item.html pub=pub %}{% endfor %}
+      </div>
+    {% endfor %}
   </div>
 </section>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll(".pub-filter-btn");
+  var items = document.querySelectorAll(".pub-item");
+  var years = document.querySelectorAll(".pub-year");
+  function applyFilter(f){
+    items.forEach(function(el){
+      el.hidden = (f !== "all" && el.getAttribute("data-type") !== f);
+    });
+    years.forEach(function(y){
+      var list = y.nextElementSibling;
+      var anyVisible = list && Array.prototype.some.call(list.querySelectorAll(".pub-item"), function(el){ return !el.hidden; });
+      y.hidden = !anyVisible;
+      if(list) list.hidden = !anyVisible;
+    });
+  }
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      btns.forEach(function(x){ x.classList.remove("active"); });
+      b.classList.add("active");
+      applyFilter(b.getAttribute("data-filter"));
+    });
+  });
+})();
+</script>
